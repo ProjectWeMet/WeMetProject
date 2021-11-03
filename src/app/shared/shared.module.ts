@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import {MatButtonModule} from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import {MatSliderModule} from '@angular/material/slider';
+
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -31,7 +33,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MatRadioModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatSliderModule
   ],
   exports: [
     CommonModule,
@@ -46,7 +49,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     MatRadioModule,
     MatButtonModule,
     NgxSpinnerModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSliderModule
  
   ]
 }
