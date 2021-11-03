@@ -26,6 +26,10 @@ export class NavbarComponent implements OnInit {
   GoToRegister(){
     this.router.navigate(['register']);
   }
+  GoProject(){
+    this.router.navigate(['home/projects']);
+
+  }
   ngOnInit(): void {
   }
 

@@ -3660,7 +3660,6 @@ button:focus {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
 }
 .job-area-list .job-list-item li {
     list-style-type: none;
