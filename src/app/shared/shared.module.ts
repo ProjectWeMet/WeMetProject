@@ -8,17 +8,25 @@ import { MatSelectCountryModule } from "@angular-material-extensions/select-coun
 import {HttpClientModule} from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './home-navbar/navbar.component';
+import { FooterComponent } from './home-footer/footer.component';
 import {MatButtonModule} from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import {MatSliderModule} from '@angular/material/slider';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { UserFooterComponent } from './user-footer/user-footer.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    UserNavbarComponent,
+    UserFooterComponent,
+    AdminNavbarComponent,
+    AdminFooterComponent
   ],
   imports: [
     CommonModule,

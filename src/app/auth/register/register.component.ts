@@ -274,7 +274,6 @@ export class RegisterComponent implements OnInit {
       "Åland Islands"
   ]
   
-  
   onSubmit() {
     console.log(this.registerForm.value);
     this.route.navigate(['']);
