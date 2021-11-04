@@ -14,6 +14,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MyWorkComponent } from './my-work/my-work.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { MyWorkComponent } from './my-work/my-work.component';
   ],
   imports: [
     CommonModule,
-    UserDashboardRoutingModule
+    UserDashboardRoutingModule,
+    SharedModule
   ]
 })
 export class UserDashboardModule { }
