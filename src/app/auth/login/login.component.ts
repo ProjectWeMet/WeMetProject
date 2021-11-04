@@ -79,7 +79,7 @@ export class LoginComponent implements OnInit {
       this.spinner.show();
       setTimeout(() => {
         this.spinner.hide();
-        this.router.navigate(['home']);
+        this.router.navigate(['user/projects']);
       }, 3000);
         
         // this.router.navigate(['register']);
