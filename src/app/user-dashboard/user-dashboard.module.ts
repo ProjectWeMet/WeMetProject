@@ -8,7 +8,7 @@ import { UsersComponent } from './users/users.component';
 import { PublishedProjectsComponent } from './published-projects/published-projects.component';
 import { ShownProjectsComponent } from './shown-projects/shown-projects.component';
 import { AddProjectComponent } from './add-project/add-project.component';
-import { EditProjctComponent } from './edit-projct/edit-projct.component';
+import { EditProjctComponent } from './edit-project/edit-projct.component';
 import { HomeComponent } from './home/home.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ProfileComponent } from './profile/profile.component';
