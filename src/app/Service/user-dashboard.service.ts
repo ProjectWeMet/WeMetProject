@@ -40,4 +40,64 @@ export class UserDashboardService {
     
     })
   }
+ getOrderByDateDesc(){
+    this.spiner.show();
+     this.http.get('https://localhost:44374/api/Project/SearchProjectOrderByDateDesc')
+     .subscribe((data:any)=>{
+      this.spiner.hide();
+      this.Projects=data;
+
+      // this.toastr.success('Deleted ');
+    
+    },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+  } 
+  getOrderByCountApplyJobDesc(){
+    this.spiner.show();
+     this.http.get('https://localhost:44374/api/Project/SearchProjectOrderByCountApplyJobDesc')
+     .subscribe((data:any)=>{
+      this.spiner.hide();
+      this.Projects=data;
+
+      // this.toastr.success('Deleted ');
+    
+    },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+  } 
+  getOrderByCountApplyJobAsc(){
+    this.spiner.show();
+     this.http.get('https://localhost:44374/api/Project/SearchProjectOrderByCountApplyJobAsc')
+     .subscribe((data:any)=>{
+      this.spiner.hide();
+      this.Projects=data;
+
+      // this.toastr.success('Deleted ');
+    
+    },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+  } 
+  getOrderByDateAsc(){
+    this.spiner.show();
+     this.http.get('https://localhost:44374/api/Project/SearchProjectOrderByDateAsc')
+     .subscribe((data:any)=>{
+      this.spiner.hide();
+      this.Projects=data;
+
+      // this.toastr.success('Deleted ');
+    
+    },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+  } 
 }

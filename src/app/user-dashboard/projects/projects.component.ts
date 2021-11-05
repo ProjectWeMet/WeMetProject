@@ -24,5 +24,45 @@ export class ProjectsComponent implements OnInit {
 
     return value;
   }
+  // modo(value: string){
+  //   switch(value) {
+  //     case "Latest":
+  //        // if modo 1 is selected do something.
+  //        break;
+  //     case "Oldest":
+  //        // if modo 2 is selected do something.
+  //        break;
+  //     case "LeastViewed":
+  //       this.getDateDesc();
+  //       break;
+  //     case "MostViewed":
+  //     // if modo 3 is selected do something.
+  //       break;
+  //   }
+  // }
+  chosenMod: string = "Latest";
+
+modo(){
+  switch(this.chosenMod) {  
+     case "Latest": { 
+      this.UserService.getOrderByDateDesc();
+      break;
+     }
+     case "Oldest": { 
+      this.UserService.getOrderByDateAsc();
+      break;
+     }
+     case "LeastViewed": { 
+      this.UserService.getOrderByCountApplyJobAsc();
+
+        break;
+     }
+     case "MostViewed": { 
+      this.UserService.getOrderByCountApplyJobDesc();
+
+      break;
+   }
+  }
+}
 
 }
