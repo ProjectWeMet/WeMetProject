@@ -43,16 +43,15 @@
                                 </select>
                             </div>
                         </form>	 -->
-                        <mat-form-field appearance="fill">
-                            <mat-label>Select</mat-label>
-                            <mat-select>
-                              <mat-option value="one">First option</mat-option>
-                              <mat-option value="two">Second option</mat-option>
-                              <mat-option value="one">1 option</mat-option>
-                              <mat-option value="two">Second option</mat-option>
-                            </mat-select>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Order By</mat-label>
+                            <select matNativeControl [(ngModel)]="chosenMod" (ngModelChange)="modo()" >
+                              <option  value="Latest">Latest</option>
+                              <option value="Oldest">Oldest</option>
+                              <option  value="LeastViewed">Least viewed</option>
+                              <option value="MostViewed">Most viewed</option>
+                            </select>
                           </mat-form-field>
-
                     </li>
                     <li></li>
                 </ul>
