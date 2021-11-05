@@ -12,6 +12,7 @@ export class ProjectsComponent implements OnInit {
   value:number=10;
   constructor(public UserService:UserDashboardService) { 
     this.UserService.getAllCategory();
+    this.UserService.getAllProjects()
   }
 
   ngOnInit(): void {

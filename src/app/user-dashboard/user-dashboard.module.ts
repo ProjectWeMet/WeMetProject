@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Pipe } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserDashboardRoutingModule } from './user-dashboard-routing.module';
@@ -15,6 +15,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { SharedModule } from '../shared/shared.module';
+import { CardProjectComponent } from './projects/card-project/card-project.component';
+import { LengthStringFormatePipe } from './projects/card-project/lengthStringFormate.pipe';
+import { ShowApplyJobPipe } from './projects/card-project/showApplyJob.pipe';
+import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.pipe';
 
 
 @NgModule({
@@ -30,12 +34,17 @@ import { SharedModule } from '../shared/shared.module';
     MyProfileComponent,
     ProfileComponent,
     EditProfileComponent,
-    MyWorkComponent
+    MyWorkComponent,
+    CardProjectComponent,
+    LengthStringFormatePipe,
+    ShowApplyJobPipe,
+    DaysBetweenDatesPipe
+    
   ],
   imports: [
     CommonModule,
     UserDashboardRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class UserDashboardModule { }
