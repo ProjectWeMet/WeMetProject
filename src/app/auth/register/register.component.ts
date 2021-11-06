@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     // userName: new FormControl('', [Validators.required,Validators.minLength(5),Validators.maxLength(20)]),
     userName: new FormControl('', [Validators.required,Validators.minLength(5),Validators.maxLength(20)]),
     password: new FormControl('', [Validators.required,Validators.minLength(8)]),
-    gender: new FormControl('', [Validators.required]),
+    // gender: new FormControl('', [Validators.required]),
     confirmPassword: new FormControl('', [Validators.required,Validators.minLength(8)])})
     hide = true;
     hide1 = true;
@@ -282,9 +282,22 @@ export class RegisterComponent implements OnInit {
     this.route.navigate(['']);
 
    }
+   
+  
   constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
+  onchang(){
+    if (this.registerForm.controls.password.value== this.
+      registerForm.controls.confirmPassword.value) {
+    this.registerForm.controls.confirmPassword.setErrors(null);
+    }
+    else{
+    this.registerForm.controls.confirmPassword.setErrors({
+    mismatch:true});
+    }
+
+}
 
 }
