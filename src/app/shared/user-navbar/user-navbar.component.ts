@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-user-navbar',
@@ -7,9 +9,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
+  }
+
+  GoToRegister(){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+      this.router.navigate(['register']);
+    }, 2000);
+   
+  }
+
+  goToProject(){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+      this.router.navigate(['user/projects']);
+    }, 2000);
+   
+  }
+
+  GoToUser(){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+      this.router.navigate(['user/user']);
+    }, 2000);
+   
+  }
+
+  GoTologin(){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+      this.router.navigate(['']);
+    }, 2000);
+   
+   
   }
 
 }

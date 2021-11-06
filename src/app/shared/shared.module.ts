@@ -68,8 +68,13 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatSliderModule,
 
     FooterPageComponent,
+    UserNavbarComponent,
+    UserFooterComponent,
+    AdminNavbarComponent,
+    AdminFooterComponent,
+    NavbarPageComponent
 
-    NavbarComponent
+    
     
 
 
