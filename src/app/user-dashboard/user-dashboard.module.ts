@@ -14,6 +14,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MyWorkComponent } from './my-work/my-work.component';
+import { SharedModule } from '../shared/shared.module';
+import { NavbarComponent } from '../shared/home-navbar/navbar.component';
 
 
 @NgModule({
