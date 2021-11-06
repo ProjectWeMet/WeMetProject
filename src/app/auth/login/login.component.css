@@ -52,15 +52,14 @@
 
 .register{
   background: -webkit-linear-gradient(left, #3B064D, #BC6FF1);
-  padding: 5%;
+  padding: 3%;
 
-  margin: 1% ;
  
 }
 .register-left{
   text-align: center;
   color: #fff;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 .register-left input{
   border: none;
