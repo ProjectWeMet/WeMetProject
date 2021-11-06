@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -32,6 +32,28 @@ export class UserDashboardService {
       this.spiner.hide();
       this.Projects=data;
 
+      // this.toastr.success('Deleted ');
+    
+    },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+  }
+  searchProject(data:any){debugger
+    const headerDict={
+      'Content-Type':'application/json',
+      'Accept':'application/json'
+    }
+    const requestOptions={
+      headers:new HttpHeaders(headerDict)
+    }
+
+    this.spiner.show();
+     this.http.post('https://localhost:44374/api/Project/SearchProject',data,requestOptions)
+     .subscribe((data:any)=>{
+      this.spiner.hide();
+      this.Projects=data;
       // this.toastr.success('Deleted ');
     
     },error=>{

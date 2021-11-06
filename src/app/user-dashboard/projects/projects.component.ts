@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
 import { UserDashboardModule } from '../user-dashboard.module';
 
@@ -10,6 +11,8 @@ import { UserDashboardModule } from '../user-dashboard.module';
 export class ProjectsComponent implements OnInit {
 
   value:number=10;
+  orderBy: string = "Latest";
+
   constructor(public UserService:UserDashboardService) { 
     this.UserService.getAllCategory();
     this.UserService.getAllProjects()
@@ -17,33 +20,76 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+    title=new FormControl("");
+    categoryName=new FormControl("");
+    startAt=new FormControl("");
+    EndAt=new FormControl("");
+    BudgetFrom=new FormControl("");
+    BudgetTo=new FormControl("");
+    Skills=new FormControl("");
+ 
   formatLabel(value: number) {
     // if (value >= 10) {
     //   return Math.round(value / 10) ;
     // }
-
+    // this.BudgetTo.setValue(value);
     return value;
   }
-  // modo(value: string){
-  //   switch(value) {
-  //     case "Latest":
-  //        // if modo 1 is selected do something.
-  //        break;
-  //     case "Oldest":
-  //        // if modo 2 is selected do something.
-  //        break;
-  //     case "LeastViewed":
-  //       this.getDateDesc();
-  //       break;
-  //     case "MostViewed":
-  //     // if modo 3 is selected do something.
-  //       break;
-  //   }
-  // }
-  chosenMod: string = "Latest";
+  
+  title1:any;
+  categoryName1:any;
+  startAt1:any;
+  endAt1:any;
+  BudgetFrom1:any;
+  BudgetTo1:any;
+  Skills1:any;
 
-modo(){
-  switch(this.chosenMod) {  
+  search(){debugger
+   if(this.startAt.value==""){
+    this.startAt1="2000-01-01";
+
+   }
+   else{
+    this.startAt1=this.startAt.value;
+
+   }
+   if(this.EndAt.value==""){
+    this.endAt1="2100-01-01";
+
+   }
+   else{
+    this.endAt1=this.EndAt.value;
+
+   }
+   if(this.value==10){
+    this.BudgetTo1="";
+   }
+   else{
+    this.BudgetTo1=this.value;
+   }
+    this.title1=this.title.value;//c#
+    this.categoryName1=this.categoryName.value;
+    this.BudgetFrom1=10;
+    this.Skills1=this.Skills.value;
+
+    const data2={
+      ProjectTitle:this.title1.toString(),
+      DateFrom:this.startAt1,
+      DateTo:this.endAt1.toString(),
+      ExpectedBudgetFrom: parseInt(this.BudgetFrom1),
+      ExpectedBudgetTo:parseInt(this.BudgetTo1),
+      CategoryTitle:this.categoryName1.toString(),
+      RequiredSkills:this.Skills1.toString()
+
+
+    }
+    this.UserService.searchProject(data2);
+
+  }
+ 
+getOrderBy(){
+  switch(this.orderBy) {  
      case "Latest": { 
       this.UserService.getOrderByDateDesc();
       break;

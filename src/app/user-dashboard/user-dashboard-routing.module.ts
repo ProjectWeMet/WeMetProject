@@ -1,5 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProjectsComponent } from './projects/projects.component';
+import { UsersComponent } from './users/users.component';
+
+const routes: Routes = [
+  {
+    path:'user',
+    component:UsersComponent
+  },
+  {
 import { ProjectsComponent } from '../user-dashboard/projects/projects.component';
 
 const routes: Routes = [

@@ -66,7 +66,13 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatSliderModule,
+
     FooterPageComponent,
+
+    NavbarComponent
+    
+
+
   ]
 }
 )
