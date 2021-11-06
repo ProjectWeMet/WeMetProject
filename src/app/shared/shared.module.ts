@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Pipe } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -27,6 +27,8 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent
+    
+    
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,9 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
     MatButtonModule,
     MatProgressSpinnerModule,
     NgxSpinnerModule,
-    MatSliderModule
+    MatSliderModule,
+    
+    
   ],
   exports: [
     CommonModule,
@@ -61,7 +65,7 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
     MatSliderModule,
     NavbarComponent,
     FooterComponent
- 
+
   ]
 }
 )
