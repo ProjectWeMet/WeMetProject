@@ -63,6 +63,9 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatSliderModule,
+    NavbarComponent,
+    FooterComponent
+
   ]
 }
 )
