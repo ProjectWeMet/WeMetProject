@@ -21,9 +21,6 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
 
 @NgModule({
   declarations: [
-    
-
-    
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
@@ -69,7 +66,7 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
 
     FooterPageComponent,
 
-    NavbarComponent
+    
     
 
 
