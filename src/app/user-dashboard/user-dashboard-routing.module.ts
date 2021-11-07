@@ -12,7 +12,9 @@ const routes: Routes = [
     path:'projects',
     component:ProjectsComponent
   }
-];
+]
+
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
