@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboredAdminComponent } from './dashbored-admin/dashbored-admin.component';
 
 const routes: Routes = [];
 
