@@ -1,0 +1,17 @@
+.bag{
+    
+    width: 30px !important;
+    filter: invert(22%) sepia(91%) saturate(1163%) hue-rotate(239deg) brightness(84%) contrast(100%);}
+
+.span-two {
+    color: #fff;
+    background-color: #0c6e0c;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 13px;
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+}
+

@@ -9,7 +9,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class UserDashboardService {
   Categorys:any=[];
   Projects:any=[];
-
+  projectDetaile:any={};
   constructor( private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
   getAllCategory(){
     this.spiner.show();
@@ -122,4 +122,11 @@ export class UserDashboardService {
     
     })
   } 
+  GetProjectById(id:number){
+    return this.http.get('https://localhost:44374/api/Project/ProjectById/'+id)
+    .subscribe((data:any)=>{
+     this.projectDetaile=data;
+     console.log(this.projectDetaile);  
+   })
+ }
 }
