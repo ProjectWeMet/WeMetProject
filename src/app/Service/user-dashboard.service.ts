@@ -1,3 +1,4 @@
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,7 +11,23 @@ export class UserDashboardService {
   Categorys:any=[];
   Projects:any=[];
   projectDetaile:any={};
+  Users:any=[];
+
   constructor( private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
+
+  getAllUsers(){
+    this.spiner.show();
+     this.http.get('https://localhost:44374/api/Users/GetAllUsers')
+     .subscribe((data:any)=>{
+      this.spiner.hide();
+      this.Users=data;
+    },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+  }
+
   getAllCategory(){
     this.spiner.show();
      this.http.get('https://localhost:44374/api/Category')
@@ -54,6 +71,7 @@ export class UserDashboardService {
      .subscribe((data:any)=>{
       this.spiner.hide();
       this.Projects=data;
+
       // this.toastr.success('Deleted ');
     
     },error=>{
@@ -62,6 +80,8 @@ export class UserDashboardService {
     
     })
   }
+
+
  getOrderByDateDesc(){
     this.spiner.show();
      this.http.get('https://localhost:44374/api/Project/SearchProjectOrderByDateDesc')
@@ -130,3 +150,5 @@ export class UserDashboardService {
    })
  }
 }
+
+
