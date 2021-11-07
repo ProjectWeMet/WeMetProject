@@ -1,3 +1,4 @@
+
 <!-- Navbar -->
 <app-user-navbar></app-user-navbar>
 <!-- End Navbar -->
@@ -49,7 +50,7 @@
                     </li>
                 </ul>
 
-                <div class="employer-item">
+                <!-- <div class="employer-item">
                     <a routerLink="/job-details">
                         <img src="assets/img/home-one/job1.png" alt="Employer">
                         <h3>Product Designer</h3>
@@ -61,8 +62,15 @@
                         <span class="span-one">Accounting</span>
                         <span class="span-two">FULL TIME</span>
                     </a>
-                </div>
+                </div> -->
 
+                <app-user-card *ngFor="let card of UserService.Users" [userId]="card.userId"
+                [email]="card.email" [fname]="card.fname" [lname]="card.lname" 
+                [phoneNumber]="card.phoneNumber" [dob]="card.dob" [country]="card.country" [specialization]="card.specialization" 
+                 [biography]="card.biography"  [imageName]="card.imageName" [userName]="card.userName" [password]="card.password"
+                 [roleNameId]="card.roleNameId" [jobTitle]="card.jobTitle" [isActive]="card.isActive" [skill]="card.skill"
+                 [createDate]="card.createDate" [verification]="card.verification">
+                </app-user-card>
                 
 
                 <!-- <div class="pagination-area">

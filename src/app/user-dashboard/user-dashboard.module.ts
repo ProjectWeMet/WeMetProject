@@ -15,10 +15,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { SharedModule } from '../shared/shared.module';
+
+import { NavbarComponent } from '../shared/home-navbar/navbar.component';
+import { UserCardComponent } from './users/user-card/user-card.component';
+
 import { CardProjectComponent } from './projects/card-project/card-project.component';
 import { LengthStringFormatePipe } from './projects/card-project/lengthStringFormate.pipe';
 import { ShowApplyJobPipe } from './projects/card-project/showApplyJob.pipe';
 import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.pipe';
+
 
 
 @NgModule({
@@ -35,11 +40,15 @@ import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.p
     ProfileComponent,
     EditProfileComponent,
     MyWorkComponent,
+
+    UserCardComponent,
+
     CardProjectComponent,
     LengthStringFormatePipe,
     ShowApplyJobPipe,
     DaysBetweenDatesPipe
     
+
   ],
   imports: [
     CommonModule,
