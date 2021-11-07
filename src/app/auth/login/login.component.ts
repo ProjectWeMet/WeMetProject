@@ -69,11 +69,11 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('password', this.password.value);
         localStorage.setItem('rememberMe', 'yes')
       
-        this.spinner.show();
-      setTimeout(() => {
-        this.spinner.hide();
-        this.router.navigate(['home']);
-      }, 5000);
+      //   this.spinner.show();
+      // setTimeout(() => {
+      //   this.spinner.hide();
+      //   this.router.navigate(['home']);
+      // }, 5000);
       }
       
       this.spinner.show();
