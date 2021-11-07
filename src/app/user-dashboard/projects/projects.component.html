@@ -70,8 +70,12 @@
                                         
                                         <li *ngFor="let card of UserService.Categorys">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                <label class="form-check-label" for="defaultCheck1">{{card.categoryTitle}}</label>
+                                                <!-- <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">{{card.categoryTitle}}</label> -->
+                                                <input class="form-check-input"  (change)="onChange(card?.categoryTitle, $any($event.target)?.checked)"name="{{ card.categoryTitle }}" type="checkbox" id="{{card.categoryTitle}}">
+                                                <label class="form-check-label" for="{{card.categoryTitle}}">
+                                                    {{card.categoryTitle}}
+                                                </label>
                                             </div>
                                         </li>   
                                     </ul>
