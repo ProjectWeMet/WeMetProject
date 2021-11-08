@@ -18,6 +18,7 @@ import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserFooterComponent } from './user-footer/user-footer.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
     MatProgressSpinnerModule,
     NgxSpinnerModule,
     MatSliderModule,
+    MatCheckboxModule
     
     
   ],
@@ -64,7 +66,8 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
     MatProgressSpinnerModule,
     MatSliderModule,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MatCheckboxModule
 
   ]
 }

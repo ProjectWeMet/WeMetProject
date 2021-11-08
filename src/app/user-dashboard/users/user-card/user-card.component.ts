@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
 
 @Component({
   selector: 'app-user-card',
@@ -32,7 +34,25 @@ export class UserCardComponent implements OnInit {
   // @Input () "offerUser": null,
   // @Input () "schedule": null,
   // @Input () "testmonial": null
-  constructor() { }
+  @Output() openProfile = new EventEmitter();
+
+  showProfile()
+  {
+    if(this.userId)
+    {
+      // this.toastr.success('you are welcome ')
+      // debugger;
+      // console.log(this.homeS.data1);
+      
+      this.UserService.getUserById(this.userId);
+      // this.router.navigate(['user/profile']);
+      // this.openProfile.emit();
+    }
+    else{
+      // this.toastr.warning('This item cannot be loded!!')
+    }
+  }
+  constructor(public UserService:UserDashboardService,private router:Router) { }
 
   ngOnInit(): void {
   }
