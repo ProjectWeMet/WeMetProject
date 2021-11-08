@@ -28,7 +28,7 @@ export class UserDashboardService {
     })
   }
 
-  getAllCategory(){
+  getAllCategory(){debugger
     this.spiner.show();
      this.http.get('https://localhost:44374/api/Category')
      .subscribe((data:any)=>{
