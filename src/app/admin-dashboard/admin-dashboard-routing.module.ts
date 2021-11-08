@@ -5,6 +5,7 @@ import { DashboredAdminComponent } from './dashbored-admin/dashbored-admin.compo
 import { ReportTableUSERComponent } from './report-table-user/report-table-user.component';
 
 const routes: Routes = [{
+
   path:"dash",
   component:DashboredAdminComponent
 },
