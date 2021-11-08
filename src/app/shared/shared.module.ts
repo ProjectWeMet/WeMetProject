@@ -18,19 +18,17 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
 
 @NgModule({
   declarations: [
-    
-
-    
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent,
-    FooterPageComponent
-    
+    FooterPageComponent,
+    SidbarAdminComponent  
     
   ],
   imports: [
@@ -40,7 +38,6 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    
     HttpClientModule,
     MatSelectModule,
     MatRadioModule,
@@ -66,17 +63,13 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatSliderModule,
-
+    SidbarAdminComponent,
     FooterPageComponent,
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent
-
-    
-    
-
 
   ]
 }
