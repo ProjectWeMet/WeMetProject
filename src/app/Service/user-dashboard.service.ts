@@ -13,6 +13,7 @@ export class UserDashboardService {
   Projects:any=[];
   projectDetaile:any={};
   Users:any=[];
+  User:any=[];
 
 
   constructor( private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
@@ -188,7 +189,7 @@ export class UserDashboardService {
     })
   }
 
-  } 
+   
   GetProjectById(id:number){
     return this.http.get('https://localhost:44374/api/Project/ProjectById/'+id)
     .subscribe((data:any)=>{
