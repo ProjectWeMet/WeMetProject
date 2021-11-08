@@ -4,12 +4,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
-import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
+//import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
 import {HttpClientModule} from '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
-import { NavbarComponent } from './home-navbar/navbar.component';
-import { FooterComponent } from './home-footer/footer.component';
 import {MatButtonModule} from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgxSpinnerModule } from 'ngx-spinner';
@@ -19,15 +17,21 @@ import { UserFooterComponent } from './user-footer/user-footer.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { NavbarPageComponent } from './navbar-page/navbar-page.component';
+import { FooterPageComponent } from './footer-page/footer-page.component';
+
 
 @NgModule({
   declarations: [
-    NavbarComponent,
-    FooterComponent,
+    
+
+    
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
-    AdminFooterComponent
+    AdminFooterComponent,
+    NavbarPageComponent,
+    FooterPageComponent
     
     
   ],
@@ -38,7 +42,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatSelectCountryModule,
+    
     HttpClientModule,
     MatSelectModule,
     MatRadioModule,
@@ -57,7 +61,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatSelectCountryModule,
+    NavbarPageComponent,
     HttpClientModule,
     MatSelectModule,
     MatRadioModule,
@@ -65,9 +69,20 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatSliderModule,
-    NavbarComponent,
-    FooterComponent,
-    MatCheckboxModule
+    MatCheckboxModule,
+
+
+    FooterPageComponent,
+    UserNavbarComponent,
+    UserFooterComponent,
+    AdminNavbarComponent,
+    AdminFooterComponent,
+    NavbarPageComponent
+
+    
+    
+
+
 
   ]
 }
