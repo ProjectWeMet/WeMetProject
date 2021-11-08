@@ -20,6 +20,8 @@ import { CardProjectComponent } from './projects/card-project/card-project.compo
 import { LengthStringFormatePipe } from './projects/card-project/lengthStringFormate.pipe';
 import { ShowApplyJobPipe } from './projects/card-project/showApplyJob.pipe';
 import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.pipe';
+import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.pipe';
+
 
 
 
@@ -43,7 +45,9 @@ import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.p
     CardProjectComponent,
     LengthStringFormatePipe,
     ShowApplyJobPipe,
-    DaysBetweenDatesPipe
+    DaysBetweenDatesPipe,
+    LenghtStringFormatPipe,
+   
     
 
   ],

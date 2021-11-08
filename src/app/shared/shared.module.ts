@@ -16,21 +16,21 @@ import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserFooterComponent } from './user-footer/user-footer.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
+
 
 @NgModule({
   declarations: [
-    
-
-    
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent,
-    FooterPageComponent
-    
+    FooterPageComponent,
+    SidbarAdminComponent  
     
   ],
   imports: [
@@ -40,7 +40,6 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    
     HttpClientModule,
     MatSelectModule,
     MatRadioModule,
@@ -48,6 +47,7 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatProgressSpinnerModule,
     NgxSpinnerModule,
     MatSliderModule,
+    MatCheckboxModule
     
     
   ],
@@ -67,15 +67,17 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatProgressSpinnerModule,
     MatSliderModule,
 
+    MatCheckboxModule,
+
+
+    SidbarAdminComponent,
+
     FooterPageComponent,
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent
-
-    
-    
 
 
   ]
