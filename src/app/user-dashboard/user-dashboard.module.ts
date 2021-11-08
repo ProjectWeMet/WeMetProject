@@ -15,13 +15,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { SharedModule } from '../shared/shared.module';
-
 import { UserCardComponent } from './users/user-card/user-card.component';
-
 import { CardProjectComponent } from './projects/card-project/card-project.component';
 import { LengthStringFormatePipe } from './projects/card-project/lengthStringFormate.pipe';
 import { ShowApplyJobPipe } from './projects/card-project/showApplyJob.pipe';
 import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.pipe';
+import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.pipe';
+
 
 
 
@@ -45,7 +45,9 @@ import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.p
     CardProjectComponent,
     LengthStringFormatePipe,
     ShowApplyJobPipe,
-    DaysBetweenDatesPipe
+    DaysBetweenDatesPipe,
+    LenghtStringFormatPipe,
+   
     
 
   ],
