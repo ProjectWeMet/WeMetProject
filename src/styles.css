@@ -1,6 +1,4 @@
-You can add global styles to this file, and also import other style files
-
-
+/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -280,7 +278,7 @@ button:focus {
     max-width: 710px;
 }
 .banner-content h1 span {
-    color: #ca8bdc;
+    color: #fe4a55;
 }
 .banner-content p {
     margin-bottom: 40px;
@@ -2688,10 +2686,74 @@ button:focus {
 /*----- End Home Demo Two CSS -----*/
 /*----- Home Demo Three CSS -----*/
 /*-- Navbar --*/
-
+.main-nav.three nav .navbar-nav .nav-item:hover a {
+    color: #fe4a55;
+}
+.main-nav.three nav .navbar-nav .nav-item a {
+    color: #fff;
+}
+.main-nav.three nav .navbar-nav .nav-item a:hover, .main-nav.three nav .navbar-nav .nav-item a:focus, .main-nav.three nav .navbar-nav .nav-item a.active {
+    color: #fe4a55;
+}
+.main-nav.three nav .navbar-nav .nav-item .dropdown-menu li:hover a {
+    color: #fe4a55;
+}
+.main-nav.three nav .navbar-nav .nav-item .dropdown-menu li a {
+    color: #fff;
+}
+.main-nav.three nav .navbar-nav .nav-item .dropdown-menu li a:before {
+    background-color: #fe4a55;
+}
+.main-nav.three nav .navbar-nav .nav-item .dropdown-menu li a:hover, .main-nav.three nav .navbar-nav .nav-item .dropdown-menu li a:focus, .main-nav.three nav .navbar-nav .nav-item .dropdown-menu li a.active {
+    color: #fe4a55;
+}
+.main-nav.three nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
+    color: #fff;
+}
+.main-nav.three nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .main-nav.three nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .main-nav.three nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+    color: #fe4a55;
+}
+.main-nav.three .tooltip-span {
+    color: #221668;
+    background-color: #fff;
+}
+.main-nav.three .tooltip-span:before {
+    border-top: 7px solid #fff;
+}
+.main-nav.three .tooltip-span.two {
+    color: #fff;
+    background-color: #fe4a55;
+}
+.main-nav.three .tooltip-span.two:before {
+    border-top: 7px solid #fe4a55;
+}
+.main-nav.three.menu-shrink {
+    background: #161616;
+    box-shadow: 0px 0px 20px 0px #636363 6b;
+}
+.side-nav.three .login-left {
+    color: #fff;
+}
+.side-nav.three .login-left i {
+    color: #fff;
+}
+.side-nav.three .login-left:hover {
+    color: #fe4a55;
+}
+.side-nav.three .job-right {
+    background-color: #fe4a55;
+}
+.side-nav.three .job-right i {
+    background-color: #c02932;
+}
+.side-nav.three .job-right:hover {
+    background-color: #c02932;
+}
 /*-- End Navbar --*/
 /*-- Banner --*/
-
+.banner-area.three {
+    background-color: #161616;
+}
 .banner-area.three:before {
     display: none;
 }
@@ -2758,7 +2820,7 @@ button:focus {
     color: #fff;
 }
 .banner-content.three h1 span {
-    color: #ca8bdc;
+    color: #fe4a55;
 }
 .banner-content.three .banner-form-area .btn {
     background-color: #fe4a55;

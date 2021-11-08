@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(public UserService:UserDashboardService) { }
 
   ngOnInit(): void {
+    
   }
 
 }
