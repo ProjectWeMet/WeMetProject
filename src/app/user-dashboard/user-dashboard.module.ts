@@ -16,7 +16,6 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { SharedModule } from '../shared/shared.module';
 
-import { NavbarComponent } from '../shared/home-navbar/navbar.component';
 import { UserCardComponent } from './users/user-card/user-card.component';
 
 import { CardProjectComponent } from './projects/card-project/card-project.component';
