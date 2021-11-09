@@ -21,6 +21,7 @@ import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
 import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-routing.module';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-
     MatProgressSpinnerModule,
     NgxSpinnerModule,
     MatSliderModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule
     
     
   ],
@@ -69,7 +71,7 @@ import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-
     MatProgressSpinnerModule,
     MatSliderModule,
      MatCheckboxModule,
-
+     MatGridListModule,
     SidbarAdminComponent,
 
     FooterPageComponent,

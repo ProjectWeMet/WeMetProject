@@ -2,6 +2,10 @@
 <!-- qqqqqqqqqqqqqq -->
 <!-- Navbar -->
 <!-- <app-navbar></app-navbar> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 <app-navbar-page></app-navbar-page>
 <!-- End Navbar -->
 
@@ -36,108 +40,40 @@
             </div>
             <h2>Company Offering Job</h2>
         </div>
-
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="employer-item">
-                    <a routerLink="/job-details">
-                        <img src="assets/img/home-one/job1.png" alt="Employer">
-                        <h3>Product Designer</h3>
-                        <ul>
-                            <li><i class="flaticon-send"></i> Los Angeles, CS, USA</li>
-                            <li>5 months ago</li>
-                        </ul>
-                        <p>We are Looking for a skilled Ul/UX designer amet conscu adiing elitsed do eusmod tempor</p>
-                        <span class="span-one">Accounting</span>
-                        <span class="span-two">FULL TIME</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12" >
-                <div class="employer-item">
-                    <a href="blog-details.html">
-                        <img src="assets/img/home-one/job2.png" alt="Employer">
-                        <h3>Sr. Shopify Developer</h3>
-                        <ul>
-                            <li><i class="flaticon-send"></i> Houston, TX, USA</li>
-                            <li>4 months ago</li>
-                        </ul>
-                        <p>Responsible for managing skilled Ul/UX designer amet conscu adiing elitsed do eusmod</p>
-                        <span class="span-one">Accounting</span>
-                        <span class="span-two two">FULL TIME</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12">
-                <a routerLink="/job-details">
-                    <div class="employer-item">
-                        <img src="assets/img/home-one/job3.png" alt="Employer">
-                        <h3>Tax Manager</h3>
-                        <ul>
-                            <li><i class="flaticon-send"></i> Ho Chi Minh City, Vietnam</li>
-                            <li>6 months ago</li>
-                        </ul>
-                        <p>International collaborative a skilled Ul/UX designer amet conscu adiing elitsed do eusmod</p>
-                        <span class="span-one two">Broardcasting</span>
-                        <span class="span-two three">FREELANCER</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-6 col-md-12">
-                <div class="employer-item">
-                    <a routerLink="/job-details">
-                        <img src="assets/img/home-one/job4.png" alt="Employer">
-                        <h3>Senior Data Engineer</h3>
-                        <ul>
-                            <li><i class="flaticon-send"></i> Cardiss, UK</li>
-                            <li>9 months ago</li>
-                        </ul>
-                        <p>International collaborative designer amet conscu adiing elitsed do eusmod tempor</p>
-                        <span class="span-one three">Web & Software Dev</span>
-                        <span class="span-two four">REMOTE</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12">
-                <div class="employer-item">
-                    <a routerLink="/job-details">
-                        <img src="assets/img/home-one/job5.png" alt="Employer">
-                        <h3>Construction Worker</h3>
-                        <ul>
-                            <li><i class="flaticon-send"></i> Adelaide SA, Australia</li>
-                            <li>10 months ago</li>
-                        </ul>
-                        <p>We are Looking for a skilled Ul/UX designer amet conscu adiing elitsed do eusmod tempor</p>
-                        <span class="span-one">Accounting</span>
-                        <span class="span-two">FULL TIME</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12">
-                <div class="employer-item">
-                    <a routerLink="/job-details">
-                        <img src="assets/img/home-one/job6.png" alt="Employer">
-                        <h3>Product Manager</h3>
-                        <ul>
-                            <li><i class="flaticon-send"></i> Warangal, Telangana, India</li>
-                            <li>2 months ago</li>
-                        </ul>
-                        <p>Wind Power Engineering Manager amet conscu adiing elitsed do eusmod tempor</p>
-                        <span class="span-one four">Customer Service</span>
-                        <span class="span-two">FULL TIME</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-       
     </div>
-</section>
+ 
+ 
+<div class="container">
+    <mat-grid-list cols="2" rowHeight="230px" gutterSize ="22px" >
+        <mat-grid-tile
+        *ngFor="let card of UserService.Projects"
+        >
+            <app-cardsprojects         [fName]="card.fName"
+            [lName]="card.lName" [projectTitle]="card.projectTitle" [countApplyJob]="card.countApplyJob" 
+            [projectDetails]="card.projectDetails" [dateOfCreate]="card.dateOfCreate" [projectId]="card.projectId">
+        </app-cardsprojects>
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>
+    
+        <!-- <div class="container">
+            <div class="col-md-12">
+                <div class="col-lg-12 col-md-6" >
+            <app-cardsprojects class="col-lg-12 col-md-6"        *ngFor="let card of UserService.Projects" [fName]="card.fName"
+            [lName]="card.lName" [projectTitle]="card.projectTitle" [countApplyJob]="card.countApplyJob" 
+            [projectDetails]="card.projectDetails" [dateOfCreate]="card.dateOfCreate" [projectId]="card.projectId">
+        </app-cardsprojects>
+        </div>
+    </div>
+</div> -->
+  
+
+    </section>
+
+        
+
+
+
 <!-- End Employer -->
 
 
@@ -437,63 +373,34 @@
 
 
 <!-- TESTIMONIALS -->
-<section class="testimonials">
-    <div class="container">
-  
-        <div class="row">
-          <div class="col-sm-12">
-            <div id="customers-testimonials" class="owl-carousel">
-  
-              <!--TESTIMONIAL 1 -->
-              <div class="item">
-                <div class="shadow-effect">
-                  <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                  <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
-                </div>
-                <div class="testimonial-name">EMILIANO AQUILANI</div>
-              </div>
-              <!--END OF TESTIMONIAL 1 -->
-              <!--TESTIMONIAL 2 -->
-              <div class="item">
-                <div class="shadow-effect">
-                  <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                  <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
-                </div>
-                <div class="testimonial-name">ANNA ITURBE</div>
-              </div>
-              <!--END OF TESTIMONIAL 2 -->
-              <!--TESTIMONIAL 3 -->
-              <div class="item">
-                <div class="shadow-effect">
-                  <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                  <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
-                </div>
-                <div class="testimonial-name">LARA ATKINSON</div>
-              </div>
-              <!--END OF TESTIMONIAL 3 -->
-              <!--TESTIMONIAL 4 -->
-              <div class="item">
-                <div class="shadow-effect">
-                  <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                  <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
-                </div>
-                <div class="testimonial-name">IAN OWEN</div>
-              </div>
-              <!--END OF TESTIMONIAL 4 -->
-              <!--TESTIMONIAL 5 -->
-              <div class="item">
-                <div class="shadow-effect">
-                  <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
-                  <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
-                </div>
-                <div class="testimonial-name">MICHAEL TEDDY</div>
-              </div>
-              <!--END OF TESTIMONIAL 5 -->
-            </div>
-          </div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol> <!-- Wrapper for carousel items -->
+    <div class="carousel-inner">
+        <div class="item carousel-item active">
+            <div class="img-box"><img src="https://i.imgur.com/Ur43esv.jpg" alt=""></div>
+            <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+            <p class="overview"><b>Paula Wilsons</b>Seo Analyst </p>
+            <div class="star-rating"> </div>
         </div>
+        <div class="item carousel-item">
+            <div class="img-box"><img src="https://i.imgur.com/8RKXAIV.jpg" alt=""></div>
+            <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+            <p class="overview"><b>Paula Wilson</b>Media Analyst </p>
+            <div class="star-rating"> </div>
         </div>
-      </section>
+        <div class="item carousel-item">
+            <div class="img-box"><img src="https://i.imgur.com/J6l19aF.jpg" alt=""></div>
+            <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit.</p>
+            <p class="overview"><b>Antonio Moreno</b>Web Developer</p>
+            <div class="star-rating"> </div>
+        </div>
+    </div> <!-- Carousel controls --> <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev"> <i class="fa fa-angle-left"></i> </a> <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next"> <i class="fa fa-angle-right"></i> </a>
+</div>
       <!-- END OF TESTIMONIALS -->
   
 

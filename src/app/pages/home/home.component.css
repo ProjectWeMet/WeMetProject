@@ -54,10 +54,10 @@
 
 /* lllllllllllllllllllllllllllllllll */
 
-body {
+/* body {
   font-family: "Open Sans", sans-serif;
   margin-top: 200px
-}
+} */
 
 h2 {
   color: #333;
@@ -184,3 +184,4 @@ h2::after {
   border: none;
   background: #888
 }
+
