@@ -23,7 +23,6 @@ export class AdminDashboardService {
    this.toaster.success('Data Retrieved!'); },
    (error) => this.toaster.error(error.status));
   
-  
     }
     uploadAttachment(file:FormData,id:any){
       debugger
@@ -35,8 +34,6 @@ export class AdminDashboardService {
       const requestOptions = {
       headers: new HttpHeaders(headerDict),
       };
- 
- 
       this.http.post('https://localhost:44374/api/' +'Users/upload/',file).subscribe((data1: any) => {
       this.display_image=data1.imageName;
       debugger
