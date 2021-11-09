@@ -1,1 +1,79 @@
-<p>profile works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<!------ Include the above in your HEAD tag ---------->
+<div style=" background-color: #410853;">
+ <div   class="container-fluid emp-profile" style=" height: 135vh;width: 100%; background-color: #610c7a;">
+<div  class="container-fluid emp-profile">
+            <form method="post"  >
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <!-- <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h4>
+                                        {{UserService.User[0].fname}} {{UserService.User[0].lname}}
+                                    </h4>
+                                    <h5>
+                                        {{UserService.User[0].jobTitle}}
+                                    </h5>
+                                    <p><i class="material-icons">location_on</i>{{UserService.User[0].country}}</p>
+                                    <p><i class="material-icons">email</i>{{UserService.User[0].email}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Hire me"/>
+                            </div>
+                            <div class="col-md-12" style="text-align:center;">
+                                <div class="profile-head">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Personal Information</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Business Show</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-12">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row" style="background-color:whitesmoke; padding:10px;">
+                                            <div class="col-md-12">
+                                                <label><h5>Biography</h5></label><hr>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p>{{UserService.User[0].biography}}</p>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row" style="background-color:whitesmoke; padding:10px;">
+                                            <div class="col-md-12">
+                                                <label><h5>Skill</h5></label><hr>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <p>{{UserService.User[0].skill}}</p>
+                                            </div>
+                                        </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+    </div>
+</div>
+
+  

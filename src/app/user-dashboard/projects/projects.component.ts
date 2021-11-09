@@ -87,8 +87,6 @@ export class ProjectsComponent implements OnInit {
       ExpectedBudgetTo:parseInt(this.BudgetTo1),
       CategoryTitle:this.categoryName1,
       RequiredSkills:this.Skills1.toString()
-
-
     }
     this.UserService.searchProject(data2);
 
@@ -106,12 +104,10 @@ getOrderBy(){
      }
      case "LeastViewed": { 
       this.UserService.getOrderByCountApplyJobAsc();
-
         break;
      }
      case "MostViewed": { 
       this.UserService.getOrderByCountApplyJobDesc();
-
       break;
    }
   }
