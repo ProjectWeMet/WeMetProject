@@ -8,11 +8,11 @@
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-lg-8 col-md-12">
-                        <div class="left">
+                        <div class="left"> 
                             <!-- <img src="assets/img/job-details1.png" alt="Details"> -->
                             <h2>{{UserService.projectDetaile[0].projectTitle}}</h2>
                             <ul>
-                                <li><i class="material-icons">category</i>
+                               <li><i class="material-icons">category</i>
                                     {{UserService.projectDetaile[0].categoryTitle}}</li>
                                 <li><i class="material-icons">access_time_filled</i> {{UserService.projectDetaile[0].dateOfCreate |daysBetweenDates }}</li>
                             </ul>
@@ -45,13 +45,56 @@
                 <div class="widget-area1">
                     <div class="job widget-item">
                         <h3>Project Details</h3>
-                        <p>{{UserService.projectDetaile[0].projectDetails}}</p>
+                        <h6>{{UserService.projectDetaile[0].projectDetails}}</h6>
                     </div>
 
                     <div class="job widget-item">
                         <h3>Required Skills</h3>
-                        <p>{{UserService.projectDetaile[0].requiredSkills}}</p>
-                    </div>         
+                        <h6>{{UserService.projectDetaile[0].requiredSkills}}</h6>
+                    </div>     
+                    <div class="job widget-item">
+                        <h3>Required Skills</h3>
+                        <div *ngIf="!UserService.projectDetaile[0].countApplyJob" style="text-align: center;">
+                            <h6 >There are no applicants yet.</h6>
+
+                        </div>
+                        <div *ngIf="UserService.projectDetaile[0].countApplyJob">
+                            <div class="apply-item">
+                                <a >
+                                    <img src="assets/img/home-one/job1.png" alt="Employer">
+                                    <h4>Ro'a karkaz</h4>
+                                    <ul>
+                                        <li><i class="material-icons">attach_money</i>Budget:<span>100 JD</span>  </li>
+                                        <li><i class="material-icons">access_time</i>Delivery term:<span>7 week</span> </li>
+                                    </ul>
+                                    <p>A structural directive that conditionally includes a template based on the value of an expression coerced to Boolean. When the expression evaluates to true, Angular renders the template provided 
+                                        in a then clause, and whructural directive that conditionally includes a templat en false or null, Angular renders the</p>
+                                    <ul>
+                                        <li class="resume" style="color: #fff;"><i class="material-icons">download_for_offline</i>Resume</li>
+                                    </ul>
+                                </a> 
+                            </div>    
+                            <hr>
+                            <div class="apply-item">
+                                <a >
+                                    <img src="https://img.freepik.com/free-icon/important-person_318-10744.jpg?size=338&ext=jpg" alt="Employer">
+                                    <h4>Ro'a karkaz</h4>
+                                    <ul>
+                                        <li><i class="material-icons">person</i> fName </li>
+                                        <li><i class="material-icons">access_time</i>dateOfCreate | daysBetweenDates</li>
+                                    </ul>
+                                    <p>projectDetails | lengthStringFormate</p>
+                                    <ul>
+                                        <li class="span-two"><i class="material-icons">sticky_note_2</i>countApplyJob | showApplyJob</li>
+                                    </ul>
+                                </a> 
+                            </div>                       
+                        </div>
+                        </div>
+                       
+                                 
+                       
+                           
                 </div>
             </div>
 

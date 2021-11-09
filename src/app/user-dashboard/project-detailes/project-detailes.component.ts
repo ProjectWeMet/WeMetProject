@@ -8,9 +8,13 @@ import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
 })
 export class ProjectDetailesComponent implements OnInit {
 
-  constructor(public UserService:UserDashboardService ) { }
-
-  ngOnInit(): void {
+  constructor(public UserService:UserDashboardService ) { 
   }
 
+  ngOnInit(): void {
+    
+   
+  }
+
+  
 }
