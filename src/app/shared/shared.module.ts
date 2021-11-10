@@ -60,14 +60,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
     MatCheckboxModule,
     MatCardModule,
-    
-
     MatDialogModule,
     NgxMatFileInputModule
-   
-
-
-    
+      
   ],
   exports: [
     CommonModule,
