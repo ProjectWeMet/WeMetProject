@@ -18,10 +18,9 @@ export class UserDashboardService {
   ApplyJob:any=[];
   UserId:number=7;
   CV:any;
-  User:any=[];
-
-
-  constructor( private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
+  User:any={};
+  myWork:any=[];
+  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
 
 
   getAllUsers(){
@@ -185,7 +184,7 @@ export class UserDashboardService {
       this.User=data;
       // console.log(this.data1);
       
-    this.router.navigate(['user/profile']);
+    // this.router.navigate(['user/profile']);
       this.spiner.hide();
 
     },err=>{
@@ -194,6 +193,26 @@ export class UserDashboardService {
       // this.router.navigate(['']);
     })
   }
+
+
+  getMyWorkById(id:number){
+    debugger
+    this.spiner.show();
+    this.http.get('https://localhost:44374/api/MyWork/getAllMyWork/'+id).subscribe((data:any)=>{
+      debugger
+      this.myWork=data;
+      // console.log(this.data1);
+      
+    // this.router.navigate(['user/myWork']);
+      this.spiner.hide();
+
+    },err=>{
+      this.spiner.hide();
+      // this.toastr.error(err.status);
+      // this.router.navigate(['']);
+    })
+  }
+
 
    
   GetProjectById(id:number){

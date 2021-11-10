@@ -37,20 +37,20 @@ export class UserCardComponent implements OnInit {
   @Output() openProfile = new EventEmitter();
 
   showProfile()
-  {
+  {debugger
     if(this.userId)
     {
-      // this.toastr.success('you are welcome ')
-      // debugger;
-      // console.log(this.homeS.data1);
-      
       this.UserService.getUserById(this.userId);
-      // this.router.navigate(['user/profile']);
+      this.router.navigate(['user/profile']);
       // this.openProfile.emit();
     }
     else{
       // this.toastr.warning('This item cannot be loded!!')
     }
+  }
+
+  hireMe(){
+    this.router.navigate(['user/addJopOffer']);
   }
   constructor(public UserService:UserDashboardService,private router:Router) { }
 
