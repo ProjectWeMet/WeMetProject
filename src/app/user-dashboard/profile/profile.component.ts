@@ -6,6 +6,7 @@ import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
+
 export class ProfileComponent implements OnInit {
 
   constructor(public UserService:UserDashboardService) { }
