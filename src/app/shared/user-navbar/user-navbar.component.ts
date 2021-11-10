@@ -51,4 +51,14 @@ export class UserNavbarComponent implements OnInit {
    
   }
 
+  GoToAddProject(){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+      this.router.navigate(['user/addJopOffer']);
+    }, 2000);
+   
+   
+  }
+
 }

@@ -21,6 +21,8 @@ import { LengthStringFormatePipe } from './projects/card-project/lengthStringFor
 import { ShowApplyJobPipe } from './projects/card-project/showApplyJob.pipe';
 import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.pipe';
 import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.pipe';
+import { MyWorkCardComponent } from './my-work/my-work-card/my-work-card.component';
+import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
 
 
 
@@ -47,6 +49,8 @@ import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.p
     ShowApplyJobPipe,
     DaysBetweenDatesPipe,
     LenghtStringFormatPipe,
+    MyWorkCardComponent,
+    AddJopOfferComponent,
    
     
 

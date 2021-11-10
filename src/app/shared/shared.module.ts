@@ -19,6 +19,7 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatProgressSpinnerModule,
     NgxSpinnerModule,
     MatSliderModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatCardModule
     
     
   ],
@@ -77,7 +79,8 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
-    NavbarPageComponent
+    NavbarPageComponent,
+    MatCardModule
 
     
     

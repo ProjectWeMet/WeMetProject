@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
+import { MyWorkComponent } from './my-work/my-work.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { UsersComponent } from './users/users.component';
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path:'profile',
     component:ProfileComponent
+  },
+  {
+    path:'myWork',
+    component:MyWorkComponent
+  },
+  {
+    path:'addJopOffer',
+    component:AddJopOfferComponent
   }
 ]
 
