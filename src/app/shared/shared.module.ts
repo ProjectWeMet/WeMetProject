@@ -23,6 +23,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
 import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-routing.module';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-
     MatDialogModule,
     NgxMatFileInputModule,
     MatCheckboxModule
-    
+
     
   ],
   exports: [
@@ -74,7 +75,7 @@ import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-
     MatSliderModule,
     MatDialogModule,
      MatCheckboxModule,
-
+     MatGridListModule,
     SidbarAdminComponent,
 
     FooterPageComponent,
