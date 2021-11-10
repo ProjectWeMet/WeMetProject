@@ -11,13 +11,16 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class UserDashboardService {
   Categorys:any=[];
   Projects:any=[];
-
-
+  projectDetaile:any={};
   Users:any=[];
+
+
+
   User:any={};
 
   myWork:any=[];
   constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
+
 
   getAllUsers(){
     this.spiner.show();
@@ -32,7 +35,7 @@ export class UserDashboardService {
     })
   }
 
-  getAllCategory(){
+  getAllCategory(){debugger
     this.spiner.show();
      this.http.get('https://localhost:44374/api/Category')
      .subscribe((data:any)=>{
@@ -168,6 +171,7 @@ export class UserDashboardService {
       // this.toastr.error(' Not Deleted ');
     
     })
+
   }
   
   
@@ -205,6 +209,16 @@ export class UserDashboardService {
       // this.router.navigate(['']);
     })
   }
+
+   
+  GetProjectById(id:number){
+    return this.http.get('https://localhost:44374/api/Project/ProjectById/'+id)
+    .subscribe((data:any)=>{
+     this.projectDetaile=data;
+     console.log(this.projectDetaile);  
+   })
+ }
+
 }
 
 

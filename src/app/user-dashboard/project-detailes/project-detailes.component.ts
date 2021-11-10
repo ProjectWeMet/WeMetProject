@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
 
 @Component({
   selector: 'app-project-detailes',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectDetailesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public UserService:UserDashboardService ) { }
 
   ngOnInit(): void {
   }

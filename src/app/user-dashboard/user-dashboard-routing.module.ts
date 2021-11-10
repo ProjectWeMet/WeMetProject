@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsComponent } from '../user-dashboard/projects/projects.component';
+import { ProjectDetailesComponent } from './project-detailes/project-detailes.component';
 import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
@@ -14,10 +15,12 @@ const routes: Routes = [
   {
     path:'projects',
     component:ProjectsComponent
+
   },
   {
     path:'profile',
     component:ProfileComponent
+
   },
   {
     path:'myWork',
@@ -26,6 +29,12 @@ const routes: Routes = [
   {
     path:'addJopOffer',
     component:AddJopOfferComponent
+
+  },{
+    path:'projectDetailes',
+    component:ProjectDetailesComponent
+
+
   }
 ]
 

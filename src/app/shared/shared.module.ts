@@ -19,21 +19,22 @@ import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+
 import {MatCardModule} from '@angular/material/card';
+
+import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
+
 
 
 @NgModule({
   declarations: [
-    
-
-    
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent,
-    FooterPageComponent
-    
+    FooterPageComponent,
+    SidbarAdminComponent  
     
   ],
   imports: [
@@ -43,7 +44,6 @@ import {MatCardModule} from '@angular/material/card';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    
     HttpClientModule,
     MatSelectModule,
     MatRadioModule,
@@ -71,8 +71,11 @@ import {MatCardModule} from '@angular/material/card';
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatSliderModule,
+
     MatCheckboxModule,
 
+
+    SidbarAdminComponent,
 
     FooterPageComponent,
     UserNavbarComponent,
@@ -81,10 +84,6 @@ import {MatCardModule} from '@angular/material/card';
     AdminFooterComponent,
     NavbarPageComponent,
     MatCardModule
-
-    
-    
-
 
 
   ]
