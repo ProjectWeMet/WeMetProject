@@ -59,7 +59,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSliderModule,
 
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
     
 
     MatDialogModule,
@@ -96,7 +96,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AdminFooterComponent,
     NavbarPageComponent,
 
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
 
     NgxMatFileInputModule
 
