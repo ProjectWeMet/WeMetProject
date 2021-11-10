@@ -18,12 +18,7 @@ export class UserDashboardService {
   ApplyJob:any=[];
   UserId:number=7;
   CV:any;
-  User:any=[];
-
-
-
   User:any={};
-
   myWork:any=[];
   constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
 
