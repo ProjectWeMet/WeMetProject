@@ -22,7 +22,12 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
 
 import {MatCardModule} from '@angular/material/card';
 
+import {MatDialogModule} from '@angular/material/dialog';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+
 import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
+import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-routing.module';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -34,7 +39,8 @@ import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
     AdminFooterComponent,
     NavbarPageComponent,
     FooterPageComponent,
-    SidbarAdminComponent  
+    SidbarAdminComponent  ,
+    
     
   ],
   imports: [
@@ -51,9 +57,16 @@ import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
     MatProgressSpinnerModule,
     NgxSpinnerModule,
     MatSliderModule,
+
     MatCheckboxModule,
     MatCardModule
     
+
+    MatDialogModule,
+    NgxMatFileInputModule
+   
+
+
     
   ],
   exports: [
@@ -71,10 +84,9 @@ import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatSliderModule,
-
-    MatCheckboxModule,
-
-
+    MatDialogModule,
+     MatCheckboxModule,
+     MatGridListModule,
     SidbarAdminComponent,
 
     FooterPageComponent,
@@ -83,7 +95,12 @@ import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent,
+
     MatCardModule
+
+    NgxMatFileInputModule
+
+
 
 
   ]

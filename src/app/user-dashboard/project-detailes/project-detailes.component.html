@@ -8,11 +8,11 @@
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-lg-8 col-md-12">
-                        <div class="left">
+                        <div class="left"> 
                             <!-- <img src="assets/img/job-details1.png" alt="Details"> -->
                             <h2>{{UserService.projectDetaile[0].projectTitle}}</h2>
                             <ul>
-                                <li><i class="material-icons">category</i>
+                               <li><i class="material-icons">category</i>
                                     {{UserService.projectDetaile[0].categoryTitle}}</li>
                                 <li><i class="material-icons">access_time_filled</i> {{UserService.projectDetaile[0].dateOfCreate |daysBetweenDates }}</li>
                             </ul>
@@ -45,13 +45,52 @@
                 <div class="widget-area1">
                     <div class="job widget-item">
                         <h3>Project Details</h3>
-                        <p>{{UserService.projectDetaile[0].projectDetails}}</p>
+                        <h6>{{UserService.projectDetaile[0].projectDetails}}</h6>
                     </div>
 
                     <div class="job widget-item">
                         <h3>Required Skills</h3>
-                        <p>{{UserService.projectDetaile[0].requiredSkills}}</p>
-                    </div>         
+                        <h6>{{UserService.projectDetaile[0].requiredSkills}}</h6>
+                    </div>     
+                    <div class="job widget-item">
+                        <h3>ِApply </h3>
+                        <h6>Hurry up to apply now for a job opportunity in the project</h6>
+                        <div class=" m-2" style="text-align: center; ">
+                            <a class="apply-btn" (click)="openDialog()">Apply Now <i class="material-icons">add</i></a>
+                            </div>
+                    </div>     
+                    <div class="job widget-item">
+                        <h3>Employment applications</h3>
+                        <div *ngIf="!UserService.projectDetaile[0].countApplyJob" style="text-align: center;">
+                            <h6 >There are no applicants yet.</h6>
+
+                        </div>
+                        <div *ngIf="UserService.projectDetaile[0].countApplyJob">
+                            <div *ngFor="let card of UserService.ApplyJob">
+                                <div class="apply-item">
+                                    <a >
+                                        <img src="assets/img/home-one/job1.png" alt="Employer">
+                                        <h4>{{card.fName}} {{card.lName}}</h4>
+                                        <ul>
+                                            <li><i class="material-icons">attach_money</i>Budget:<span>{{card.offerValue}} JD</span>  </li>
+                                            <li><i class="material-icons">access_time</i>Delivery term:<span>{{card.deliveryTerm}}</span> </li>
+                                        </ul>
+                                        <p>{{card.offerDetails}}</p>
+                                        <ul>
+                                            <li class="resume" style="color: #fff;" (click)="downloadFile(card.cv)"><i class="material-icons">download_for_offline</i>Resume</li>
+                                        </ul>
+                                    </a> 
+                                </div>    
+                                <hr>
+                            </div>
+                          
+                                       
+                        </div>
+                        </div>
+                       
+                                 
+                       
+                           
                 </div>
             </div>
 
@@ -118,59 +157,3 @@
         </div>
     </div>
 </div>
-<!-- End Job Details -->
-
-<!-- Job -->
-<div class="job-details-related pt-100 pb-70">
-    <div class="container">
-        <div class="section-title">
-            <h2>Related Jobs</h2>
-        </div>
-
-        <div class="employer-item">
-            <a routerLink="/job-details">
-                <img src="assets/img/home-one/job1.png" alt="Employer">
-                <h3>Product Designer</h3>
-                <ul>
-                    <li><i class="flaticon-send"></i> Los Angeles, CS, USA</li>
-                    <li>5 months ago</li>
-                </ul>
-                <p>We are Looking for a skilled Ul/UX designer amet conscu adiing elitsed do eusmod tempor</p>
-                <span class="span-one">Accounting</span>
-                <span class="span-two">FULL TIME</span>
-            </a>
-        </div>
-
-        <div class="employer-item">
-            <a routerLink="/job-details">
-                <img src="assets/img/home-one/job2.png" alt="Employer">
-                <h3>Sr. Shopify Developer</h3>
-                <ul>
-                    <li><i class="flaticon-send"></i> Houston, TX, USA</li>
-                    <li>4 months ago</li>
-                </ul>
-                <p>Responsible for managing skilled Ul/UX designer amet conscu adiing elitsed do eusmod</p>
-                <span class="span-one">Accounting</span>
-                <span class="span-two two">FULL TIME</span>
-            </a>
-        </div>
-
-        <div class="employer-item">
-            <a routerLink="/job-details">
-                <img src="assets/img/home-one/job3.png" alt="Employer">
-                <h3>Tax Manager</h3>
-                <ul>
-                    <li><i class="flaticon-send"></i>Ho Chi Minh City, Vietnam</li>
-                    <li>6 months ago</li>
-                </ul>
-                <p>International collaborative a skilled Ul/UX designer amet conscu adiing elitsed do eusmod</p>
-                <span class="span-one two">Broardcasting</span>
-                <span class="span-two three">FREELANCER</span>
-            </a>
-        </div>
-    </div>
-</div>
-<!-- End Job -->
-
-<!-- Footer -->
-<!-- End Footer -->
