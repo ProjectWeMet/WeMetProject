@@ -3580,6 +3580,7 @@ button:focus {
     color: #fff;
     background-color: #c02932;
 }
+
 .new-area .new-img {
     position: relative;
     margin-bottom: 30px;
@@ -6720,6 +6721,11 @@ button:focus {
    }
 }
 /*----- End Back to Top -----*/
+.applyDialog .mat-dialog-container{
+    width: 450px;
+    border-radius: 10px;
+    border: 1px solid  #673AB7;
 
 
+  }
 

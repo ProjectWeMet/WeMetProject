@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
-                <!-- <ul class="job-list-item align-items-center">
+                <ul class="job-list-item align-items-center">
                    
                     <li>
                         
@@ -45,18 +45,18 @@
                           </mat-form-field>
                     </li>
                     <li></li>
-                </ul> -->
+                </ul>
 
-                <app-card-published-projects *ngFor="let card of UserService.PublishedProjects" [projectId]="card.projectId"
-                [isAccept]="card.isAccept" [isComplete]="card.isComplete" [countApplyJob]="card.countApplyJob" 
-                [projectTitle]="card.projectTitle" [dateOfCreate]="card.dateOfCreate" >
-            </app-card-published-projects>
+                <app-card-project *ngFor="let card of UserService.Projects" [fName]="card.fName"
+                [lName]="card.lName" [projectTitle]="card.projectTitle" [countApplyJob]="card.countApplyJob" 
+                [projectDetails]="card.projectDetails" [dateOfCreate]="card.dateOfCreate" [projectId]="card.projectId">
+            </app-card-project>
                     
 
               
             </div>
 
-            <!-- <div class="col-lg-4 col-md-12">
+            <div class="col-lg-4 col-md-12">
                 <div class="job-list-right">
                         <div class="job-list-all">
                             <div class="search">
@@ -70,7 +70,8 @@
                                         
                                         <li *ngFor="let card of UserService.Categorys">
                                             <div class="form-check">
-                                              
+                                                <!-- <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">{{card.categoryTitle}}</label> -->
                                                 <input class="form-check-input"  (change)="onChange(card?.categoryTitle, $any($event.target)?.checked)"name="{{ card.categoryTitle }}" type="checkbox" id="{{card.categoryTitle}}">
                                                 <label class="form-check-label" for="{{card.categoryTitle}}">
                                                     {{card.categoryTitle}}
@@ -119,7 +120,7 @@
                         </div>
                     
                 </div>  
-            </div> -->
+            </div>
         </div>
     </div>
 </div>

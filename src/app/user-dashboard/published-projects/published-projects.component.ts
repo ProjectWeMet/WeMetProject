@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
 
 @Component({
   selector: 'app-published-projects',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublishedProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public UserService:UserDashboardService) {
+    this.UserService.getPublishedProjects(this.UserService.UserId);
+    this.UserService.getAllProjects()
+   }
 
   ngOnInit(): void {
   }
