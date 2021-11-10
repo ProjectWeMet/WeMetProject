@@ -16,22 +16,24 @@ import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 import { UserFooterComponent } from './user-footer/user-footer.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { SidbarAdminComponent } from './sidbar-admin/sidbar-admin.component';
+import { AdminDashboardRoutingModule } from '../admin-dashboard/admin-dashboard-routing.module';
+
 
 @NgModule({
   declarations: [
-    
-
-    
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent,
-    FooterPageComponent
+    FooterPageComponent,
+    SidbarAdminComponent  ,
     
     
   ],
@@ -42,7 +44,6 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-    
     HttpClientModule,
     MatSelectModule,
     MatRadioModule,
@@ -51,7 +52,9 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
     NgxSpinnerModule,
     MatSliderModule,
     MatDialogModule,
-    NgxMatFileInputModule
+    NgxMatFileInputModule,
+    MatCheckboxModule
+    
     
   ],
   exports: [
@@ -70,6 +73,10 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
     MatProgressSpinnerModule,
     MatSliderModule,
     MatDialogModule,
+     MatCheckboxModule,
+
+    SidbarAdminComponent,
+
     FooterPageComponent,
     UserNavbarComponent,
     UserFooterComponent,
@@ -78,9 +85,6 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
     NavbarPageComponent,
     NgxMatFileInputModule
 
-
-    
-    
 
 
   ]
