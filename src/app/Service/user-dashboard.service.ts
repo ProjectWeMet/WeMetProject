@@ -11,8 +11,13 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class UserDashboardService {
   Categorys:any=[];
   Projects:any=[];
+  PublishedProjects:any=[];
+
   projectDetaile:any={};
   Users:any=[];
+  ApplyJob:any=[];
+  UserId:number=7;
+  CV:any;
   User:any=[];
 
 
@@ -169,6 +174,7 @@ export class UserDashboardService {
     
     })
 
+
   }
   
   
@@ -194,9 +200,95 @@ export class UserDashboardService {
     return this.http.get('https://localhost:44374/api/Project/ProjectById/'+id)
     .subscribe((data:any)=>{
      this.projectDetaile=data;
-     console.log(this.projectDetaile);  
+     this.getApplyJobByProject(id);
+    //  console.log(id+"GetProjectById")
    })
  }
+ getApplyJobByProject(id:number){debugger
+  this.spiner.show();
+  this.http.get('https://localhost:44374/api/ApplyJob/GetApplyJobByProject/'+id)
+  .subscribe((data:any)=>{
+   this.ApplyJob=data;
+   this.spiner.hide();
+
+ },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+}
+uploadAttachment(file:FormData, apply:any){
+  debugger
+
+  const headerDict = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+  }
+  const requestOptions = {
+  headers: new HttpHeaders(headerDict),
+  };
+  this.http.post('https://localhost:44374/api/ApplyJob/uploadCv',file).subscribe((d: any) => {
+    
+    this.CV=d.cv.toString();
+    debugger
+  if(d){    
+    const data1={
+      deliveryTerm:apply.deliveryTerm,
+      offerValue:apply.offerValue,
+      offerDetails:apply.offerDetails,
+      userId:apply.userId,
+      projectId:apply.projectId,
+      cv:this.CV
+      }
+      console.log(d)
+  
+      this.CreateApplyJob(data1)
+
+  }
+  
+  }, error => {
+    console.log("data")
+
+  });
+  }
+  CreateApplyJob(date1:any){debugger
+    const headerDict = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+      }
+      const requestOptions = {
+      headers: new HttpHeaders(headerDict),
+      };
+    this.spiner.show();
+    this.http.post('https://localhost:44374/api/ApplyJob/createApplyJob',date1,requestOptions)
+    .subscribe((data:any)=>{
+     this.spiner.hide();
+    //  this.GetProjectById(date1.projectId);
+    this.router.navigate(['user/projects']);
+
+    //  this.toastr.success('Deleted ');
+   
+   },error=>{
+     this.spiner.hide();
+     // this.toastr.error(' Not Deleted ');
+   
+   })
+  }
+  getPublishedProjects(id:any){
+    this.spiner.show();
+     this.http.get('https://localhost:44374/api/Project/publishedById/'+id)
+     .subscribe((data:any)=>{
+      this.spiner.hide();
+      this.PublishedProjects=data;
+
+      // this.toastr.success('Deleted ');
+    
+    },error=>{
+      this.spiner.hide();
+      // this.toastr.error(' Not Deleted ');
+    
+    })
+  }
 
 }
 

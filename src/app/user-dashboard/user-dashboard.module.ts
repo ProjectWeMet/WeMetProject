@@ -20,6 +20,8 @@ import { CardProjectComponent } from './projects/card-project/card-project.compo
 import { LengthStringFormatePipe } from './projects/card-project/lengthStringFormate.pipe';
 import { ShowApplyJobPipe } from './projects/card-project/showApplyJob.pipe';
 import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.pipe';
+import { AddApplyDialogComponent } from './project-detailes/add-apply-dialog/add-apply-dialog.component';
+import { CardPublishedProjectsComponent } from './published-projects/card-published-projects/card-published-projects.component';
 import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.pipe';
 
 
@@ -46,11 +48,15 @@ import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.p
     LengthStringFormatePipe,
     ShowApplyJobPipe,
     DaysBetweenDatesPipe,
-    LenghtStringFormatPipe,
+    AddApplyDialogComponent,
+    CardPublishedProjectsComponent,
+
    
     
 
   ],
+  entryComponents:[AddApplyDialogComponent]
+  ,
   imports: [
     CommonModule,
     UserDashboardRoutingModule,
