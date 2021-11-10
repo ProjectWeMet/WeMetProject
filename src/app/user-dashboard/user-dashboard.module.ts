@@ -46,6 +46,8 @@ import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.p
 
     CardProjectComponent,
     LengthStringFormatePipe,
+    LenghtStringFormatPipe
+,
     ShowApplyJobPipe,
     DaysBetweenDatesPipe,
     AddApplyDialogComponent,
