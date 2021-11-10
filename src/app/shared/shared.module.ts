@@ -18,6 +18,8 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatProgressSpinnerModule,
     NgxSpinnerModule,
     MatSliderModule,
-    
+    MatDialogModule,
+    NgxMatFileInputModule
     
   ],
   exports: [
@@ -66,13 +69,15 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     NgxSpinnerModule,
     MatProgressSpinnerModule,
     MatSliderModule,
-
+    MatDialogModule,
     FooterPageComponent,
     UserNavbarComponent,
     UserFooterComponent,
     AdminNavbarComponent,
     AdminFooterComponent,
-    NavbarPageComponent
+    NavbarPageComponent,
+    NgxMatFileInputModule
+
 
     
     
