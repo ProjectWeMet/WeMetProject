@@ -22,7 +22,8 @@ export class UserDashboardService {
 
   User:any={};
   myWork:any=[];
-  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
+  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router
+    ,private toastr:ToastrService ) { }
 
 
   getAllUsers(){
