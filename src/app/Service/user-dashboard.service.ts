@@ -22,7 +22,8 @@ export class UserDashboardService {
 
   User:any={};
   myWork:any=[];
-  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
+  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router
+    ,private toastr:ToastrService ) { }
 
 
   getAllUsers(){
@@ -318,6 +319,19 @@ uploadAttachment(file:FormData, apply:any){
      this.toastr.success('The Schedule has been sent successfully');
      this.GetProjectById(ProjectId);
    },error=>{
+     this.spiner.hide();
+     this.toastr.error('Something went wrong');
+   
+   })
+  }
+  SearchPublishedProject(Project:any){debugger
+    this.spiner.show();
+    this.http.post('https://localhost:44374/api/Project/SearchPublishedProject',Project)
+    .subscribe((data:any)=>{
+     this.spiner.hide();
+     this.toastr.success('Retrieve data');
+     this.PublishedProjects=data;
+       },error=>{
      this.spiner.hide();
      this.toastr.error('Something went wrong');
    

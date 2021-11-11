@@ -14,6 +14,9 @@ export class CardPublishedProjectsComponent implements OnInit {
   @Input () projectTitle:string|undefined;
   @Input () countApplyJob:number|undefined;
   @Input () dateOfCreate:string|undefined;
+  @Input () projectDetails:string|undefined;
+  @Input () isExecution:string|undefined;
+
   constructor(public UserService:UserDashboardService ,private router:Router) {
   }
 

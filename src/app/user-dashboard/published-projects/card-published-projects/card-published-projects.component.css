@@ -7,7 +7,7 @@
     height: 180px;
     padding: 25px 25px 25px 100px;
     transition: 0.5s all ease;
-    background-color: #f1f0f6    ;
+    background-color: #fff    ;
 }
 .published-item:hover {
     transform: translate(0, -10px);
@@ -80,4 +80,9 @@
 .published-item .span-two.four {
     padding: 4px;
     background-color: #21a212;
+}
+.published-item .span-two.five {
+    padding: 4px;
+    color: black;
+    background-color: yellow;
 }
