@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-project.component.css']
 })
 export class AddProjectComponent implements OnInit {
-
+  value:number=10;
   constructor() { }
 
   ngOnInit(): void {

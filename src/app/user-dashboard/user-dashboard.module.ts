@@ -25,6 +25,8 @@ import { CardPublishedProjectsComponent } from './published-projects/card-publis
 import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.pipe';
 import { PublishedDetailesComponent } from './published-detailes/published-detailes.component';
 import { AddScheduleDialogComponent } from './published-detailes/add-schedule-dialog/add-schedule-dialog.component';
+import { MyWorkCardComponent } from './my-work/my-work-card/my-work-card.component';
+import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
 
 
 
@@ -52,10 +54,16 @@ import { AddScheduleDialogComponent } from './published-detailes/add-schedule-di
 ,
     ShowApplyJobPipe,
     DaysBetweenDatesPipe,
+
+    LenghtStringFormatPipe,
+    MyWorkCardComponent,
+    AddJopOfferComponent,
+
     AddApplyDialogComponent,
     CardPublishedProjectsComponent,
     PublishedDetailesComponent,
     AddScheduleDialogComponent,
+
 
    
     
