@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
 
 @Component({
   selector: 'app-card-published-projects',
@@ -12,11 +14,16 @@ export class CardPublishedProjectsComponent implements OnInit {
   @Input () projectTitle:string|undefined;
   @Input () countApplyJob:number|undefined;
   @Input () dateOfCreate:string|undefined;
-  constructor() { }
+  constructor(public UserService:UserDashboardService ,private router:Router) {
+  }
 
   ngOnInit(): void {
   }
   ViewDetailes(){
+    if(this.projectId){
+      this.UserService.GetProjectById(this.projectId);
+      this.router.navigate(['user/publishedDetailes']);
+    }
     
   }
 }
