@@ -303,6 +303,19 @@ uploadAttachment(file:FormData, apply:any){
    
    })
   }
+  SearchPublishedProject(Project:any){debugger
+    this.spiner.show();
+    this.http.post('https://localhost:44374/api/Project/SearchPublishedProject',Project)
+    .subscribe((data:any)=>{
+     this.spiner.hide();
+     this.toastr.success('Retrieve data');
+     this.PublishedProjects=data;
+       },error=>{
+     this.spiner.hide();
+     this.toastr.error('Something went wrong');
+   
+   })
+  }
 }
 
 
