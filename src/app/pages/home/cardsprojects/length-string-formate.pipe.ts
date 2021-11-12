@@ -11,11 +11,11 @@ export class LengthStringFormatePipe implements PipeTransform {
       if(value==null){
           return null;
       }
-      else if(value.length<=190){
-          return value.substring(0,190);
+      else if(value.length<=140){
+          return value.substring(0,140);
       }
-      else if(value.length>190){
-          return value.substring(0,190)+"....";
+      else if(value.length>140){
+          return value.substring(0,140)+"....";
       }
   
       

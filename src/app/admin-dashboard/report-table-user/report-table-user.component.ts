@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
+import { AdminDashboardService } from 'src/app/Service/admin-dashboard.service';
 
 @Component({
   selector: 'app-report-table-user',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportTableUSERComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor() { 
+
+
+  }
 
   ngOnInit(): void {
   }
