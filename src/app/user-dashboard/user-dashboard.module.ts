@@ -59,6 +59,7 @@ import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
     MyWorkCardComponent,
     AddJopOfferComponent,
 
+
     AddApplyDialogComponent,
     CardPublishedProjectsComponent,
     PublishedDetailesComponent,
@@ -66,6 +67,7 @@ import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
 
 
    
+
     
 
   ],

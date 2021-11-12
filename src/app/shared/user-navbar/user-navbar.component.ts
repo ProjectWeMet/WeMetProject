@@ -62,7 +62,7 @@ export class UserNavbarComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-      this.router.navigate(['user/addJopOffer']);
+      this.router.navigate(['user/addproject']);
     }, 2000);
    
    
