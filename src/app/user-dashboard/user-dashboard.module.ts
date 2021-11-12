@@ -51,7 +51,6 @@ import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
     LenghtStringFormatPipe,
     MyWorkCardComponent,
     AddJopOfferComponent,
-   
     
 
   ],

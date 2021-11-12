@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from '../user-dashboard/projects/projects.component';
 import { ProjectDetailesComponent } from './project-detailes/project-detailes.component';
 import { UsersComponent } from './users/users.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 const routes: Routes = [
   {
@@ -27,8 +28,8 @@ const routes: Routes = [
     component:MyWorkComponent
   },
   {
-    path:'addJopOffer',
-    component:AddJopOfferComponent
+    path:'addproject',
+    component:AddProjectComponent
 
   },{
     path:'projectDetailes',

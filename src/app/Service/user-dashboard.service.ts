@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -13,13 +14,10 @@ export class UserDashboardService {
   Projects:any=[];
   projectDetaile:any={};
   Users:any=[];
-
-
-
   User:any={};
-
   myWork:any=[];
-  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
+  addProject:any=[];
+  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router,private toastr:ToastrService) { }
 
 
   getAllUsers(){
@@ -39,7 +37,7 @@ export class UserDashboardService {
     this.spiner.show();
      this.http.get('https://localhost:44374/api/Category')
      .subscribe((data:any)=>{
-      this.spiner.hide();
+      this.spiner.hide();debugger
       this.Categorys=data;
       // this.toastr.success('Deleted ');
     
@@ -219,6 +217,30 @@ export class UserDashboardService {
    })
  }
 
+
+ AddNewProject(data:any){debugger
+  const headerDict={
+    'Content-Type':'application/json',
+    'Accept':'application/json'
+  }
+  const requestOptions={
+    headers:new HttpHeaders(headerDict)
+  }
+
+  this.spiner.show();
+   this.http.post('https://localhost:44374/api/Project/CreateAddProject',data,requestOptions)
+   .subscribe((data:any)=>{
+    this.spiner.hide();
+    this.addProject=data;
+
+     this.toastr.success('add successfull');
+  
+  },error=>{
+    this.spiner.hide();
+     this.toastr.error(' Not Deleted ');
+  
+  })
+}
 }
 
 
