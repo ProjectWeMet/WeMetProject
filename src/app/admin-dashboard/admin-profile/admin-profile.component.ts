@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AdminDashboardService } from 'src/app/Service/admin-dashboard.service';
 
 @Component({
   selector: 'app-admin-profile',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(public adminDashboardService:AdminDashboardService) {
+    this.adminDashboardService.GetProfileAdmin();
+   }
 
   ngOnInit(): void {
+   
   }
 
 }

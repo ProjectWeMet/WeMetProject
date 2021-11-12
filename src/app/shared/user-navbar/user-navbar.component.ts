@@ -48,6 +48,13 @@ export class UserNavbarComponent implements OnInit {
       this.router.navigate(['']);
     }, 2000);
    
+  }
+  GoToMyProject(){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+      this.router.navigate(['user/publishedProjects']);
+    }, 1000);
    
   }
 
