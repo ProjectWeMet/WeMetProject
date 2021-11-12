@@ -9,6 +9,7 @@ import { ProjectsComponent } from '../user-dashboard/projects/projects.component
 import { ProjectDetailesComponent } from './project-detailes/project-detailes.component';
 import { PublishedProjectsComponent } from './published-projects/published-projects.component';
 import { UsersComponent } from './users/users.component';
+import { PublishedDetailesComponent } from './published-detailes/published-detailes.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
   },{
     path:'publishedProjects',
     component:PublishedProjectsComponent
+
+  },{
+    path:'publishedDetailes',
+    component:PublishedDetailesComponent
 
 
   }

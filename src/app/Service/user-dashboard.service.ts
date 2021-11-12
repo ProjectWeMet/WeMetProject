@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 
 
 
@@ -18,9 +19,11 @@ export class UserDashboardService {
   ApplyJob:any=[];
   UserId:number=7;
   CV:any;
+
   User:any={};
   myWork:any=[];
-  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router) { }
+  constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router
+    ,private toastr:ToastrService ) { }
 
 
   getAllUsers(){
@@ -308,7 +311,32 @@ uploadAttachment(file:FormData, apply:any){
     
     })
   }
-
+  addSchedule(schedule:any,ProjectId:number){debugger
+    this.spiner.show();
+    this.http.post('https://localhost:44374/api/Schedule/CreateSchedule',schedule)
+    .subscribe((data:any)=>{
+     this.spiner.hide();
+     this.toastr.success('The Schedule has been sent successfully');
+     this.GetProjectById(ProjectId);
+   },error=>{
+     this.spiner.hide();
+     this.toastr.error('Something went wrong');
+   
+   })
+  }
+  SearchPublishedProject(Project:any){debugger
+    this.spiner.show();
+    this.http.post('https://localhost:44374/api/Project/SearchPublishedProject',Project)
+    .subscribe((data:any)=>{
+     this.spiner.hide();
+     this.toastr.success('Retrieve data');
+     this.PublishedProjects=data;
+       },error=>{
+     this.spiner.hide();
+     this.toastr.error('Something went wrong');
+   
+   })
+  }
 }
 
 
