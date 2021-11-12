@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSliderChange } from '@angular/material/slider';
 import { UserDashboardService } from 'src/app/Service/user-dashboard.service';
-
+import * as moment from 'moment';
 @Component({
   selector: 'app-add-project',
   templateUrl: './add-project.component.html',
@@ -14,6 +14,8 @@ export class AddProjectComponent implements OnInit {
   
   constructor(public UserService:UserDashboardService) { 
     this.UserService.getAllCategory();
+    console.log(new Date(new Date().toString().split('GMT')[0]+'UTC').toISOString());
+    console.log(moment().format("YYYY-MM-DD[T]HH:mm:ss"));
     
   }
   value2:any=10;
@@ -62,7 +64,7 @@ console.log(this.value) ;
    
   let today = new Date()
 
-  this.DateOfCreate1=today.toISOString();
+  this.DateOfCreate1=moment().format("YYYY-MM-DD[T]HH:mm:ss");
 
   const data2={
     UserId:this.UserId1,
@@ -70,7 +72,7 @@ console.log(this.value) ;
     ProjectDetails:this.ProjectDetails.value.toString(),
     ExpectedBudget:this.ExpectedBudget1.toString(),
     RequiredSkills:this.RequiredSkills.value.toString(),
-    DateOfCreate:this.DateOfCreate1,
+    DateOfCreate:this.DateOfCreate1.toString(),
     EstimatedDeliveryTime:this.EstimatedDeliveryTime.value.toString(),
     CategoryId:this.CategoryId1
   
