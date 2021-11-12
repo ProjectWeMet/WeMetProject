@@ -26,7 +26,7 @@
 <!-- End Page Title -->
 
 <!-- Jobs -->
-<div class="job-area-list ptb-50">
+<div class="job-area-list ptb-50" style="background-color: #f1f0f6" >
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
@@ -48,78 +48,42 @@
                 </ul> -->
 
                 <app-card-published-projects *ngFor="let card of UserService.PublishedProjects" [projectId]="card.projectId"
-                [isAccept]="card.isAccept" [isComplete]="card.isComplete" [countApplyJob]="card.countApplyJob" 
-                [projectTitle]="card.projectTitle" [dateOfCreate]="card.dateOfCreate" >
+                [isAccept]="card.isAccept" [isComplete]="card.isComplete" [countApplyJob]="card.countApplyJob" [isExecution]="card.isExecution"
+                [projectTitle]="card.projectTitle" [dateOfCreate]="card.dateOfCreate" [projectDetails]="card.projectDetails" >
             </app-card-published-projects>
                     
 
               
             </div>
 
-            <!-- <div class="col-lg-4 col-md-12">
+            <div class="col-lg-4 col-md-12"> 
                 <div class="job-list-right">
-                        <div class="job-list-all">
+                        <div class="job-list-all" style="background-color: #fff;">
                             <div class="search">
                                 <h3>Search Project</h3>
-
-                                    <input type="text" class="form-control" [formControl]="title" placeholder="Project title ">
+                                <label id="example-radio-group-label">Project Title : </label>
+                                    <input type="text" class="form-control mt-2"  [formControl]="title" placeholder="Project title ">
                             </div>
-                            <div class="search mt-4 cmn-padding">
-                                <h3>Category</h3>
-                                    <ul class="job-cmn-cat ">
-                                        
-                                        <li *ngFor="let card of UserService.Categorys">
-                                            <div class="form-check">
-                                              
-                                                <input class="form-check-input"  (change)="onChange(card?.categoryTitle, $any($event.target)?.checked)"name="{{ card.categoryTitle }}" type="checkbox" id="{{card.categoryTitle}}">
-                                                <label class="form-check-label" for="{{card.categoryTitle}}">
-                                                    {{card.categoryTitle}}
-                                                </label>
-                                            </div>
-                                        </li>   
-                                    </ul>
+                            <div >
+                                <label id="example-radio-group-label">Project State :</label>
+                                <mat-radio-group
+                                aria-labelledby="example-radio-group-label"
+                                class="example-radio-group"
+                                color=primary
+                                [(ngModel)]="selectedState">
+                                <mat-radio-button class="example-radio-button" *ngFor="let state of stateProject" [value]="state">
+                                    {{state}}
+                                </mat-radio-button>
+                                </mat-radio-group>
                             </div>
-
-                            <div class="search">
-                                <h3>DateFrom</h3>
-                                <input type="date" [formControl]="startAt" class="form-control" placeholder="From ">
-                                <h3 class="mt-3">DateTo</h3>
-
-                                <input type="date" [formControl]="EndAt" class="form-control" placeholder="To ">
-
-                            
-                            </div>
-
-                            <div class="salary cmn-padding">
-                                <h3>Budget</h3>
-    
-                                <mat-slider
-                                thumbLabel
-                                [displayWith]="formatLabel"
-                                tickInterval="10"
-                                step="10"
-                                min="10"
-                                max="1000"
-                                color="primary"
-                                [(ngModel)]="value"
-                                aria-label="units"></mat-slider>
-                                <label class="example-value-label"> Budget : 10 - {{value}} JD</label>
-
-                            </div>
-
-                            <div class="search ">
-                                <h3>Skills</h3>
-                                <textarea type="text" [formControl]="Skills" class="form-control" placeholder=""></textarea>
-
-                            
-                            </div>
+ 
                             <div class="level">
                                 <button type="submit" (click)="search()" class="btn">Filter Now</button>
                             </div>
                         </div>
                     
                 </div>  
-            </div> -->
+            </div> 
         </div>
     </div>
 </div>

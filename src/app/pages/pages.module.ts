@@ -18,7 +18,8 @@ import { DepartmentWeMetComponent } from './home/department-we-met/department-we
     ContactComponent,
     CardsprojectsComponent,
     LengthStringFormatePipe,
-    DepartmentWeMetComponent,
+    DepartmentWeMetComponent
+    
     
 
  

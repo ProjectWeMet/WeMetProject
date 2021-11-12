@@ -58,10 +58,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatDialogModule,
     NgxMatFileInputModule
-   
-
-
-    
+      
   ],
   exports: [
     CommonModule,
@@ -88,7 +85,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AdminNavbarComponent,
     AdminFooterComponent,
     NavbarPageComponent,
+
     MatCardModule,
+    MatDialogModule,
     NgxMatFileInputModule
 
 

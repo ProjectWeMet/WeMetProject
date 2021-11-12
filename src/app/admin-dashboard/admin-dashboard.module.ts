@@ -15,6 +15,7 @@ import { CardProfileComponent } from './admin-profile/card-profile/card-profile.
     AdminProfileComponent,
     ReportTableUSERComponent,
     CardProfileComponent
+    
   ],
   imports: [
     CommonModule,

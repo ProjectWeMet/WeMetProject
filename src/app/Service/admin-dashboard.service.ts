@@ -12,6 +12,19 @@ export class AdminDashboardService {
   }] 
   data2 : any ={
   }
+  data3 : any=[{
+
+  }]
+ data4 : any=[]
+
+  data5 : any=[]
+  data6 : any=[{
+
+  }]
+
+
+
+
   constructor(private http:HttpClient,private toaster:ToastrService , private spinner: NgxSpinnerService) { }
 
 
@@ -69,9 +82,59 @@ export class AdminDashboardService {
     
     }
     
-
+    countUser(){
+      debugger
+      //call services
+   return this.http.get('https://localhost:44374/api/Users/CountUser').subscribe((result)=> { 
+     this.data3=result,
+     this.spinner.hide();
+     this.toaster.success('Data Retrieved!'); },
+     (error) => this.toaster.error(error.status));
     
+      }
+    
+      CountCompleteProject(){
+        debugger
+        //call services
+     return this.http.get('https://localhost:44374/api/Project/CountCompleteProject').subscribe((result)=> { 
+       this.data4=result,
+       console.log(this.data4)
+       this.spinner.hide();
+       this.toaster.success('Data Retrieved!'); },
+       (error) => this.toaster.error(error.status));
+      
+        }
+
+        CountAcceptJobSchedule(){
+          debugger
+          //call services
+       return this.http.get('https://localhost:44374/api/Schedule/CountAcceptJobSchedule').subscribe((result)=> { 
+         this.data5=result,
+       
+         this.spinner.hide();
+         this.toaster.success('Data Retrieved!'); },
+         (error) => this.toaster.error(error.status));
+        
+          }
+
+          
+          GetAllUsers(){
+          debugger
+          //call services
+       return this.http.get('https://localhost:44374/api/Users/GetAllUsers').subscribe((result)=> { 
+         this.data6=result,
+         console.log(this.data6)
+       
+         this.spinner.hide();
+        //  this.toaster.success('Data Retrieved!');
+       },
+         (error) => this.toaster.error(error.status));
+        
+          }
+        
+      
     
 }
+
 
 

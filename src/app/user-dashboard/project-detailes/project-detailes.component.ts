@@ -28,7 +28,8 @@ export class ProjectDetailesComponent implements OnInit {
 
     this.dialog.open(AddApplyDialogComponent,{
       panelClass: 'applyDialog'
-    });
+    }
+    );
 }
 downloadFile(filename :any){
   let basePath="../../../../assets/cv/Uploaded File/";

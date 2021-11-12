@@ -18,7 +18,9 @@ export class CardProfileComponent implements OnInit {
   @Input () country:string ='N/A'
   @Input () phoneNumber:string ='N/A'
 
- constructor(public adminDashboardService:AdminDashboardService,private http:HttpClient) { }
+ constructor(public adminDashboardService:AdminDashboardService,private http:HttpClient) {
+
+  }
 
   uploadFile(files:any,id:any) {debugger
     if (files.length === 0) {

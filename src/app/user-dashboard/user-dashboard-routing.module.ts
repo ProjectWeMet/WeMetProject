@@ -10,6 +10,7 @@ import { ProjectDetailesComponent } from './project-detailes/project-detailes.co
 import { PublishedProjectsComponent } from './published-projects/published-projects.component';
 import { UsersComponent } from './users/users.component';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { PublishedDetailesComponent } from './published-detailes/published-detailes.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
   },{
     path:'publishedProjects',
     component:PublishedProjectsComponent
+
+  },{
+    path:'publishedDetailes',
+    component:PublishedDetailesComponent
 
 
   }

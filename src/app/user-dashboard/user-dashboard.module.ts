@@ -23,6 +23,8 @@ import { DaysBetweenDatesPipe } from './projects/card-project/daysBetweenDates.p
 import { AddApplyDialogComponent } from './project-detailes/add-apply-dialog/add-apply-dialog.component';
 import { CardPublishedProjectsComponent } from './published-projects/card-published-projects/card-published-projects.component';
 import { LenghtStringFormatPipe } from './users/user-card/lenght-string-format.pipe';
+import { PublishedDetailesComponent } from './published-detailes/published-detailes.component';
+import { AddScheduleDialogComponent } from './published-detailes/add-schedule-dialog/add-schedule-dialog.component';
 import { MyWorkCardComponent } from './my-work/my-work-card/my-work-card.component';
 import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
 
@@ -60,6 +62,8 @@ import { AddJopOfferComponent } from './add-jop-offer/add-jop-offer.component';
 
     AddApplyDialogComponent,
     CardPublishedProjectsComponent,
+    PublishedDetailesComponent,
+    AddScheduleDialogComponent,
 
 
    
