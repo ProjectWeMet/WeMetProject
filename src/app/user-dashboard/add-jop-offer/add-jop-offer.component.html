@@ -23,24 +23,23 @@
 <!-- End Page Title -->
 
 <!-- Jobs -->
-<div class="job-area-list ptb-100">
+<div class="job-details-area ptb-50"  style="background-color: #f1f0f6;">
     <div class="container">
-        <h3>Add Project</h3>
         <div class="row">
             <div class="col-lg-8 col-md-12">
-                
-                <div class="employer-item">
-                    
+                <div class="widget-area1">
+                    <div class="job widget-item">
+                        <h3>Add Project</h3>
                     <form>
-                         <div class="form-group">
+                        <div class="form-group">
                                   <mat-form-field class="col-lg-12 col-md-12" appearance="outline" >
                                       <mat-label >Project Title</mat-label>
                                       <input matInput>
                                       <mat-error>
-                                        First Name is <strong> Required</strong>
+                                        Project Title<strong> Required</strong>
                                       </mat-error>
                                   </mat-form-field>
-                                </div> 
+                        </div> 
                                 <div class="form-group">
                                     <mat-form-field class="col-lg-12 col-md-12" appearance="outline" >
                                         <mat-label >Skills</mat-label>
@@ -57,9 +56,9 @@
                                   </div> 
                                 
                                
-                                  <div class="form-group">
-                                  <div class="salary cmn-padding" >
-                                    <h3>Budget</h3>
+                                <div class="form-group">
+                                  
+                                    <h4>Budget</h4>
         
                                     <mat-slider
                                     thumbLabel
@@ -71,9 +70,9 @@
                                     color="primary"
                                     [(ngModel)]="value"
                                     aria-label="units"></mat-slider>
-                                    <label class="example-value-label"> Budget : 10 - {{value}} JD</label>
+                                    <h6 class="example-value-label"> Budget : 10 - {{value}} JD</h6>
     
-                                </div>
+                                
                             </div>
 
                             <div class="form-group">
@@ -93,12 +92,41 @@
                                 
                       </form>
                 </div>
+                
+            </div>
 
                 
                
             </div>
-
             <div class="col-lg-4 col-md-12" >
+            <div class="information widget-item">
+                <h3>How do you add your project?</h3>
+
+                <ul>
+                    <li>
+                        <h4>Start building your project</h4>
+                        <span>Through Freelance, you can build your project as you want, enter the project details and the expected budget, so that your project will be reviewed and published for free on Freelance.
+                            After that, the best registered freelancers will submit different offers for you to choose the right offer for you and start implementing your project</span>
+                    </li>
+                    <li>
+                        <h4>An independent site that guarantees your rights</h4>
+                        <span>When you deal with a freelancer through a freelance site, the site remains a mediator between you and the freelancer who implements your project, and only when the project is fully implemented is the amount transferred to the account of the freelancer who implemented your project.</span>
+                    </li>
+                    <li>
+                        <h4>Tips for a successful business</h4>
+                        <ul>
+                            <li>Enter the project details accurately</li>
+                            <li>Fill in all the fields and provide examples of what you want</li>
+                            <li>Divide the project into several small phases</li>
+                        </ul>
+                        
+                    </li>
+                   
+                   
+                </ul>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-12" >
                                 <div class="job-cmn-cat flex-divide">
                                     <ul class="left">
                                         <li style="color: rgba(0, 0, 0, 0.666); font-size: large;">
@@ -124,7 +152,7 @@
                                 </div>                  
                    
                 
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

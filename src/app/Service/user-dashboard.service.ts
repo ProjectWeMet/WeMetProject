@@ -16,14 +16,17 @@ export class UserDashboardService {
 
   projectDetaile:any={};
   Users:any=[];
+ addProject:any=[];
   ApplyJob:any=[];
   UserId:number=7;
   CV:any;
+
 
   User:any={};
   myWork:any=[];
   constructor(private http:HttpClient,private spiner :NgxSpinnerService,private router:Router
     ,private toastr:ToastrService ) { }
+
 
 
   getAllUsers(){
@@ -43,7 +46,7 @@ export class UserDashboardService {
     this.spiner.show();
      this.http.get('https://localhost:44374/api/Category')
      .subscribe((data:any)=>{
-      this.spiner.hide();
+      this.spiner.hide();debugger
       this.Categorys=data;
       // this.toastr.success('Deleted ');
     
@@ -311,6 +314,33 @@ uploadAttachment(file:FormData, apply:any){
     
     })
   }
+
+
+
+ AddNewProject(data:any){debugger
+  const headerDict={
+    'Content-Type':'application/json',
+    'Accept':'application/json'
+  }
+  const requestOptions={
+    headers:new HttpHeaders(headerDict)
+  }
+
+  this.spiner.show();
+   this.http.post('https://localhost:44374/api/Project/CreateAddProject',data,requestOptions)
+   .subscribe((data:any)=>{
+    this.spiner.hide();
+    this.addProject=data;
+
+     this.toastr.success('add successfull');
+  
+  },error=>{
+    this.spiner.hide();
+     this.toastr.error(' Not Deleted ');
+  
+  })
+}
+
   addSchedule(schedule:any,ProjectId:number){debugger
     this.spiner.show();
     this.http.post('https://localhost:44374/api/Schedule/CreateSchedule',schedule)
@@ -337,6 +367,7 @@ uploadAttachment(file:FormData, apply:any){
    
    })
   }
+
 }
 
 
