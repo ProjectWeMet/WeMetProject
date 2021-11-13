@@ -29,7 +29,11 @@ export class HomeComponent implements OnInit {
     this.homeServiceService.GetAllCategorey();
   }
  
-
+  getImagePath(value:string ){
+    debugger
+    let basePath="../../../../assets/images/Uploaded File/";
+    return basePath+value;
+    }
 
   ngOnInit(): void {
   }

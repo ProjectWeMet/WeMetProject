@@ -8,6 +8,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CardsprojectsComponent } from './home/cardsprojects/cardsprojects.component';
 import { LengthStringFormatePipe } from './home/cardsprojects/length-string-formate.pipe';
 import { DepartmentWeMetComponent } from './home/department-we-met/department-we-met.component';
+import { BlogComponent } from './home/blog/blog.component';
+import { BlogbyIdComponent } from './home/blogby-id/blogby-id.component';
 
 
 
@@ -18,7 +20,9 @@ import { DepartmentWeMetComponent } from './home/department-we-met/department-we
     ContactComponent,
     CardsprojectsComponent,
     LengthStringFormatePipe,
-    DepartmentWeMetComponent
+    DepartmentWeMetComponent,
+    BlogComponent,
+    BlogbyIdComponent
     
     
 

@@ -107,8 +107,13 @@
             <div *ngFor ="let card of homeServiceService.allCategrey" class="col-sm-6 col-lg-4">
                 <div class="work-item two three">
                     <i class="flaticon-accounting"></i>
-                    
-                    <img class="card-img-top" style=" padding-bottom:8%; width: 50%;" src="https://jo.mostaql.com/assets/images/landing/transfer-1.svg"  alt="Card image cap">
+                    <!-- <h6 class="card-category">{{homeServiceService.display_image}}</h6> -->
+   <!-- <img style=" width: 100% !important;height:220px !important;margin-top: 20px !important;"
+        src="{{getImagePath(image)}}"> -->
+        
+         <!-- <h6 class="card-category">{{card.image}}</h6> -->
+
+                    <img class="card-img-top" style=" padding-bottom:8%; width: 50%;" src="{{getImagePath(image)}}"  alt="Card image cap">
                     <h3  style="color: #000000;">{{card.categoryTitle}}</h3>
                     <h3 style="color: #000000;">{{card.categoryId}}</h3>
                     
@@ -427,20 +432,20 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6 col-lg-4">
+            <div *ngFor ="let cardblog of homeServiceService.allBlog" class="col-sm-6 col-lg-4">
                 <div class="blog-item">
                     <div class="top">
                         <a routerLink="/blog-details"><img src="assets/img/home-one/blog1.jpg" alt="Blog"></a>
                     </div>
-                    <span>Job skills. 12-09-2020</span>
-                    <h3><a routerLink="/blog-details">The Internet Is A Job Seeker Most Crucial Success </a></h3>
-                    <div class="cmn-link">
+                    <span>{{cardblog.Title}}</span>
+                    <h3><a routerLink="/blog-details">{{cardblog.Description}} </a></h3>
+                    <!-- <div class="cmn-link">
                         <a routerLink="/blog-details"><i class="flaticon-right-arrow one"></i> Learn More <i class="flaticon-right-arrow two"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-4">
+            <!-- <div class="col-sm-6 col-lg-4">
                 <div class="blog-item">
                     <div class="top">
                         <a routerLink="/blog-details"><img src="assets/img/home-one/blog2.jpg" alt="Blog"></a>
@@ -451,9 +456,9 @@
                         <a routerLink="/blog-details"><i class="flaticon-right-arrow one"></i> Learn More <i class="flaticon-right-arrow two"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
+            <!-- <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
                 <div class="blog-item">
                     <div class="top">
                         <a routerLink="/blog-details"><img src="assets/img/home-one/blog3.jpg" alt="Blog"></a>
@@ -464,7 +469,7 @@
                         <a routerLink="/blog-details"><i class="flaticon-right-arrow one"></i> Learn More <i class="flaticon-right-arrow two"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
