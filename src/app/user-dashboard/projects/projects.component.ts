@@ -36,7 +36,7 @@ export class ProjectsComponent implements OnInit {
     // this.BudgetTo.setValue(value);
     return value;
   }
-  
+  categoryFormArray: Array<any> = [];
   title1:any;
   categoryName1:any;
   startAt1:any;
@@ -68,8 +68,14 @@ export class ProjectsComponent implements OnInit {
    else{
     this.BudgetTo1=this.value;
    }
+   if(this.categoryFormArray.toString()==""){
+    this.categoryName1=null
+   }
+   else{
+    this.categoryName1=this.categoryFormArray.toString()
+
+   }
     this.title1=this.title.value;//c#
-    this.categoryName1=this.categoryName.value;
     this.BudgetFrom1=10;
     this.Skills1=this.Skills.value;
 
@@ -79,10 +85,8 @@ export class ProjectsComponent implements OnInit {
       DateTo:this.endAt1.toString(),
       ExpectedBudgetFrom: parseInt(this.BudgetFrom1),
       ExpectedBudgetTo:parseInt(this.BudgetTo1),
-      CategoryTitle:this.categoryName1.toString(),
+      CategoryTitle:this.categoryName1,
       RequiredSkills:this.Skills1.toString()
-
-
     }
     this.UserService.searchProject(data2);
 
@@ -100,15 +104,21 @@ getOrderBy(){
      }
      case "LeastViewed": { 
       this.UserService.getOrderByCountApplyJobAsc();
-
         break;
      }
      case "MostViewed": { 
       this.UserService.getOrderByCountApplyJobDesc();
-
       break;
    }
   }
 }
-
+onChange(email:string, isChecked: boolean) {
+  if(isChecked) {
+    this.categoryFormArray.push(email);
+  } else {
+    let index = this.categoryFormArray.indexOf(email);
+    this.categoryFormArray.splice(index,1);
+  }
+console.log(this.categoryFormArray.toString())
+}
 }
